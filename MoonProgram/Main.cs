@@ -17,11 +17,9 @@ namespace MyApp
       MoonlightRuntime.Init();
 
       var resolver = new ViewResolver();
+      var win = new MoonWindow ();
 
-      MoonWindow win = new MoonWindow ();
-
-      var x = new UserControl();
-      win.Content = x; // for some reason i need to force the mlhost to load somthing first
+      // Load embedded xaml from resource
       win.Content = resolver.Loader.LoadView<object>( "Views;MoonDesk/Views/Home.xaml" ).View;
 
 

@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewLoader", "ViewLoader\ViewLoader.csproj", "{2A1A91BB-D576-47E0-A365-6D2418C0235D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonProgram", "MoonProgram\MoonProgram.csproj", "{9EC65C74-9A26-4B8B-BF9C-C856A103392C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVVM", "MVVM", "{326211EA-865D-4BE5-8105-BDDB05EBD788}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{99966BD3-58B7-412D-9E06-CB9E6169753E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonProgram", "MoonProgram\MoonProgram.csproj", "{9EC65C74-9A26-4B8B-BF9C-C856A103392C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MoonBase", "MoonBase", "{AAA7FAF3-7495-422B-8967-8026963B47DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonWindow", "MoonWindow\MoonWindow.csproj", "{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewLoader", "ViewLoader\ViewLoader.csproj", "{2A1A91BB-D576-47E0-A365-6D2418C0235D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +33,20 @@ Global
 		{9EC65C74-9A26-4B8B-BF9C-C856A103392C}.Debug|x86.Build.0 = Debug|x86
 		{9EC65C74-9A26-4B8B-BF9C-C856A103392C}.Release|x86.ActiveCfg = Release|x86
 		{9EC65C74-9A26-4B8B-BF9C-C856A103392C}.Release|x86.Build.0 = Release|x86
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|x86.Build.0 = Debug|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|x86.ActiveCfg = Release|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|x86.Build.0 = Release|Any CPU
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|x86.Build.0 = Debug|Any CPU
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99966BD3-58B7-412D-9E06-CB9E6169753E} = {326211EA-865D-4BE5-8105-BDDB05EBD788}
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A} = {326211EA-865D-4BE5-8105-BDDB05EBD788}
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
+		{2A1A91BB-D576-47E0-A365-6D2418C0235D} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = MoonProgram\MoonProgram.csproj

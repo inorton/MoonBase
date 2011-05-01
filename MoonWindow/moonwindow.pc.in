@@ -1,0 +1,6 @@
+Name: MoonWindow
+Description: MoonWindow
+Version: 0.1
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/MoonWindow.dll

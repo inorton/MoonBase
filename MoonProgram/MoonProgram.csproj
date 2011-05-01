@@ -62,19 +62,12 @@
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="MoonWindow.cs" />
-    <Compile Include="gtk-gui\MoonWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="..\..\..\..\..\..\usr\lib\libmoon.so.0">
       <Link>libmoon.so.0</Link>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AppManifest.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ViewLoader\ViewLoader.csproj">
@@ -88,6 +81,10 @@
     <ProjectReference Include="..\Views\Views.csproj">
       <Project>{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}</Project>
       <Name>Views</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoonWindow\MoonWindow.csproj">
+      <Project>{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}</Project>
+      <Name>MoonWindow</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
