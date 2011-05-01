@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MoonBase", "MoonBase", "{AAA7FAF3-7495-422B-8967-8026963B47DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.MoonWindow", "MoonWindow\Mono.MoonDesk.MoonWindow.csproj", "{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.MoonWindow", "Mono.MoonDesk.MoonWindow\Mono.MoonDesk.MoonWindow.csproj", "{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.ViewLoader", "ViewLoader\Mono.MoonDesk.ViewLoader.csproj", "{2A1A91BB-D576-47E0-A365-6D2418C0235D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.ViewLoader", "Mono.MoonDesk.ViewLoader\Mono.MoonDesk.ViewLoader.csproj", "{2A1A91BB-D576-47E0-A365-6D2418C0235D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
