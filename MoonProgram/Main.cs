@@ -5,8 +5,9 @@ using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Controls;
 using Moonlight.Gtk;
+using MoonDesk;
 
-namespace slpmoon
+namespace MyApp
 {
   class MainClass
   {
@@ -15,13 +16,13 @@ namespace slpmoon
       Gtk.Application.Init ();
       MoonlightRuntime.Init();
 
-      SLPApplication app = new SLPApplication();
+      var resolver = new ViewResolver();
 
       MoonWindow win = new MoonWindow ();
 
       var x = new UserControl();
       win.Content = x; // for some reason i need to force the mlhost to load somthing first
-      win.Content = app.Home.View;
+      win.Content = resolver.Loader.LoadView<object>( "Views;MoonDesk/Views/Home.xaml" ).View;
 
 
       win.Show ();

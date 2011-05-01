@@ -6,7 +6,7 @@ using System.Windows.Resources;
 using System.Windows.Markup;
 using System.Windows.Controls;
 
-namespace slpmoon
+namespace MoonDesk
 {
   public class XamlView<VMType> {
     public FrameworkElement View { get; set; }
@@ -23,6 +23,8 @@ namespace slpmoon
     public FrameworkElement LoadView( string assemblyName, string filename, object ViewModel )
     {
       FrameworkElement view = null;
+
+      Console.WriteLine("want to load assembly {0}", assemblyName );
 
       var asm = Assembly.Load( assemblyName );
       var stream = asm.GetManifestResourceStream( filename );
@@ -42,6 +44,22 @@ namespace slpmoon
       }
 
       return view;
+    }
+
+    public XamlView<VMType> LoadView<VMType>( string componentPath )
+      where VMType : new ()
+    {
+      if ( componentPath.Contains(";") ){
+        var slist = componentPath.Split(new char[] { ';' });
+        if ( slist.Length == 2 ){
+          var asmname = slist[0];
+          var path = slist[1];
+          var ppath = path.Replace('/','.');
+
+          return LoadView<VMType>( asmname, ppath );
+        }
+      }
+      return null; // must be relative path
     }
 
     public XamlView<VMType> LoadView<VMType>(string assembly, string viewfile)
