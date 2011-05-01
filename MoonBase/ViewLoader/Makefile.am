@@ -46,7 +46,8 @@ all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG)
 
 FILES =  \
 	AssemblyInfo.cs \
-	ViewLoader.cs 
+	ViewLoader.cs \
+	ViewResolver.cs 
 
 DATA_FILES = 
 

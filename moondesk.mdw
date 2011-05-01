@@ -1,5 +1,6 @@
 <WorkspaceItem ctype="Workspace">
   <Items>
     <Item>MoonBase/MoonBase.sln</Item>
+    <Item>examples/examples.sln</Item>
   </Items>
 </WorkspaceItem>
