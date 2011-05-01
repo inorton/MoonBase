@@ -1,0 +1,6 @@
+Installation is fairly simple.
+
+cd MoonBase
+./autogen.sh [--prefix=/usr/local]
+make
+sudo make install
