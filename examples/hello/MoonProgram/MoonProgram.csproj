@@ -60,16 +60,7 @@
       <Package>mono.moondesk.viewloader</Package>
     </Reference>
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\moonlight\Moonlight.Gtk.dll</HintPath>
-    </Reference>
-    <Reference Include="Moon.Windows.Desktop, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\moonlight\Moon.Windows.Desktop.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\moonlight\System.Windows.dll</HintPath>
+      <Package>moonlight-gtk-2.0</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
