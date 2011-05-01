@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{9EC65C74-9A26-4B8B-BF9C-C856A103392C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MoonDesk</RootNamespace>
+    <RootNamespace>MoonBase.Examples</RootNamespace>
     <AssemblyName>MoonProgram</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -17,6 +17,11 @@
     <OutputPath>bin\x86\Debug</OutputPath>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp /usr/local/lib/moonbase/* ${TargetDir}" workingdir="${TargetDir}" externalConsole="true" />
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
@@ -48,6 +53,24 @@
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.0.0, Culture=neutral">
+      <Package>mono.moondesk.moonwindow</Package>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.0.0, Culture=neutral">
+      <Package>mono.moondesk.viewloader</Package>
+    </Reference>
+    <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\moonlight\Moonlight.Gtk.dll</HintPath>
+    </Reference>
+    <Reference Include="Moon.Windows.Desktop, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\moonlight\Moon.Windows.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\moonlight\System.Windows.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">

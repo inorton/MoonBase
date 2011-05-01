@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Controls;
 using Moonlight.Gtk;
+using MoonBase.Examples;
 using MoonDesk;
 
 namespace MyApp

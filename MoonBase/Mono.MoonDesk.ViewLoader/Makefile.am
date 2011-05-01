@@ -57,9 +57,7 @@ EXTRAS = \
 	mono.moondesk.viewloader.pc.in 
 
 REFERENCES =  \
-	../../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
-	../../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
-	../../../../../../../usr/lib/mono/moonlight/System.Windows.dll \
+	-pkg:moonlight-gtk-2.0 \
 	System
 
 DLL_REFERENCES =  \

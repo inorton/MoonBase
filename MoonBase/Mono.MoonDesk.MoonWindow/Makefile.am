@@ -59,11 +59,9 @@ EXTRAS = \
 	mono.moondesk.moonwindow.pc.in 
 
 REFERENCES =  \
-	../../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
-	../../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
-	../../../../../../../usr/lib/mono/moonlight/System.Windows.dll \
 	-pkg:glib-sharp-2.0 \
 	-pkg:gtk-sharp-2.0 \
+	-pkg:moonlight-gtk-2.0 \
 	System
 
 DLL_REFERENCES =  \

@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{99966BD3-58B7-412D-9E06-CB9E6169753E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>MoonDesk</RootNamespace>
+    <RootNamespace>MoonBase.Examples</RootNamespace>
     <AssemblyName>ViewModels</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>

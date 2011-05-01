@@ -1,5 +1,5 @@
 
-EXTRA_DIST =  expansions.m4 ../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll ../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll ../../../../../../usr/lib/mono/moonlight/System.Windows.dll
+EXTRA_DIST =  expansions.m4 
 
 #Warning: This is an automatically generated file, do not edit!
 if ENABLE_DEBUG_X86

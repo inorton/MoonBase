@@ -1,7 +1,7 @@
 using System;
 using System.Windows;
 
-namespace slpmoon
+namespace MoonBase.Examples
 {
   public class ViewModelBase
   {
