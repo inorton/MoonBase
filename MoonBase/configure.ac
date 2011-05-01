@@ -1,7 +1,7 @@
 dnl Warning: This is an automatically generated file, do not edit!
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ([2.54])
-AC_INIT([MoonDesk], [0.1])
+AC_INIT([MoonBase], [0.1])
 AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
 
@@ -48,22 +48,15 @@ fi
 dnl package checks, common for all configs
 PKG_CHECK_MODULES([GTK_SHARP_20], [gtk-sharp-2.0])
 PKG_CHECK_MODULES([GLIB_SHARP_20], [glib-sharp-2.0])
-PKG_CHECK_MODULES([GLADE_SHARP_20], [glade-sharp-2.0])
 
 dnl package checks, per config
 
 
 AC_CONFIG_FILES([
-Views/views.pc
-Views/Makefile
 MoonWindow/moonwindow.pc
 MoonWindow/Makefile
 ViewLoader/viewloader.pc
 ViewLoader/Makefile
-ViewModels/viewmodels.pc
-ViewModels/Makefile
-MoonProgram/moonprogram
-MoonProgram/Makefile
 Makefile
 
 ])

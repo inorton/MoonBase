@@ -1,6 +1,6 @@
 #! /bin/sh
 
-PROJECT=MoonDesk
+PROJECT=MoonBase
 FILE=
 CONFIGURE=configure.ac
 

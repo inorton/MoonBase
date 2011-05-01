@@ -15,10 +15,6 @@ BUILD_DIR = bin/Debug
 MOONWINDOW_DLL_MDB_SOURCE=bin/Debug/MoonWindow.dll.mdb
 MOONWINDOW_DLL_MDB=$(BUILD_DIR)/MoonWindow.dll.mdb
 APPMANIFEST_XAML_SOURCE=AppManifest.xaml
-MOON_WINDOWS_DESKTOP_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll
-SYSTEM_WINDOWS_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/System.Windows.dll
-SYSTEM_WINDOWS_BROWSER_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/System.Windows.Browser.dll
-MOONLIGHT_GTK_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll
 
 endif
 
@@ -33,10 +29,6 @@ BUILD_DIR = bin/Release
 
 MOONWINDOW_DLL_MDB=
 APPMANIFEST_XAML_SOURCE=AppManifest.xaml
-MOON_WINDOWS_DESKTOP_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll
-SYSTEM_WINDOWS_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/System.Windows.dll
-SYSTEM_WINDOWS_BROWSER_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/System.Windows.Browser.dll
-MOONLIGHT_GTK_DLL_SOURCE=../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll
 
 endif
 
@@ -45,11 +37,7 @@ SATELLITE_ASSEMBLY_NAME=$(notdir $(basename $(ASSEMBLY))).resources.dll
 
 PROGRAMFILES = \
 	$(MOONWINDOW_DLL_MDB) \
-	$(APPMANIFEST_XAML) \
-	$(MOON_WINDOWS_DESKTOP_DLL) \
-	$(SYSTEM_WINDOWS_DLL) \
-	$(SYSTEM_WINDOWS_BROWSER_DLL) \
-	$(MOONLIGHT_GTK_DLL)  
+	$(APPMANIFEST_XAML)  
 
 LINUX_PKGCONFIG = \
 	$(MOONWINDOW_PC)  
@@ -71,34 +59,26 @@ EXTRAS = \
 	moonwindow.pc.in 
 
 REFERENCES =  \
-	../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
-	../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
-	../../../../../../usr/lib/mono/moonlight/System.Windows.dll \
+	../../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
+	../../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
+	../../../../../../../usr/lib/mono/moonlight/System.Windows.dll \
 	-pkg:glib-sharp-2.0 \
 	-pkg:gtk-sharp-2.0 \
 	System
 
 DLL_REFERENCES =  \
-	../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
-	../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
-	../../../../../../usr/lib/mono/moonlight/System.Windows.dll
+	../../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
+	../../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
+	../../../../../../../usr/lib/mono/moonlight/System.Windows.dll
 
 CLEANFILES = $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
 include $(top_srcdir)/Makefile.include
 
 APPMANIFEST_XAML = $(BUILD_DIR)/AppManifest.xaml
-MOON_WINDOWS_DESKTOP_DLL = $(BUILD_DIR)/Moon.Windows.Desktop.dll
-SYSTEM_WINDOWS_DLL = $(BUILD_DIR)/System.Windows.dll
-SYSTEM_WINDOWS_BROWSER_DLL = $(BUILD_DIR)/System.Windows.Browser.dll
-MOONLIGHT_GTK_DLL = $(BUILD_DIR)/Moonlight.Gtk.dll
 MOONWINDOW_PC = $(BUILD_DIR)/moonwindow.pc
 
 $(eval $(call emit-deploy-target,APPMANIFEST_XAML))
-$(eval $(call emit-deploy-target,MOON_WINDOWS_DESKTOP_DLL))
-$(eval $(call emit-deploy-target,SYSTEM_WINDOWS_DLL))
-$(eval $(call emit-deploy-target,SYSTEM_WINDOWS_BROWSER_DLL))
-$(eval $(call emit-deploy-target,MOONLIGHT_GTK_DLL))
 $(eval $(call emit-deploy-wrapper,MOONWINDOW_PC,moonwindow.pc))
 
 
