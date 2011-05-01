@@ -10,12 +10,22 @@ that comes with it).
 using Moonlight.Gtk;
 using System.Windows;
 using System.Windows.Controls;
+using MoonDesk;
 ...
 Gtk.Application.Init();
 MoonlightRuntime.Init();
 
 var host = new MoonWindow();
+
+// construct silverlight directly
 host.Content = new Button(){ Content = "Hello" };
+
+// or load from xaml
+var resolver = new Resolver()
+var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
+host.Content = mvvm.View;
+
+
 host.Show();
 
 Gtk.Application.Run();

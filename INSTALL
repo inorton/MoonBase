@@ -4,3 +4,10 @@ cd MoonBase
 ./autogen.sh [--prefix=/usr/local]
 make
 sudo make install
+
+You then just include the Moonlight.Gtk and MoonBase assemblies in your project
+(and make sure you have a AppManifest.xaml file).
+
+Have a look at the examples.
+
+Have fun :)
