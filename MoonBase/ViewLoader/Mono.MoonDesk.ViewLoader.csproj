@@ -8,7 +8,7 @@
     <ProjectGuid>{2A1A91BB-D576-47E0-A365-6D2418C0235D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>MoonDesk</RootNamespace>
-    <AssemblyName>ViewLoader</AssemblyName>
+    <AssemblyName>Mono.MoonDesk.ViewLoader</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
