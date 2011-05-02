@@ -1,5 +1,6 @@
 using System;
 using System.Windows;
+using MoonDesk;
 
 namespace MoonBase.Examples
 {
@@ -7,7 +8,9 @@ namespace MoonBase.Examples
   {
     public ViewModelBase ()
     {
+      Resolver = ViewMappings.Resolver;
     }
+    public ViewMappings Resolver { get; set; }
 
     public FrameworkElement View { get; set; }
 

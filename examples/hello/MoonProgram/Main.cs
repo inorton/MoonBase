@@ -17,11 +17,12 @@ namespace MyApp
       Gtk.Application.Init ();
       MoonlightRuntime.Init();
 
-      var resolver = new ViewResolver();
+
       var win = new MoonWindow ();
 
       // Load embedded xaml from resource
-      win.Content = resolver.Loader.LoadView<object>( "Views;MoonDesk/Views/Home.xaml" ).View;
+      var home = ViewMappings.Resolver.GetHomeView();
+      win.Content = home.View;
 
 
       win.Show ();

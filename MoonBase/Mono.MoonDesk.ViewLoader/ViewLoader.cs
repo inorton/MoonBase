@@ -8,9 +8,7 @@ using System.Windows.Controls;
 
 namespace MoonDesk
 {
-
-
-  public class XamlView<VMType> where VMType : class {
+  public class XamlViewBase {
     /// <summary>
     /// Gets or sets the view.
     /// </summary>
@@ -18,6 +16,10 @@ namespace MoonDesk
     /// The view.
     /// </value>
     public FrameworkElement View { get; set; }
+  }
+
+  public class XamlView<VMType> : XamlViewBase
+    where VMType : class {
     /// <summary>
     /// Gets or sets the view model.
     /// </summary>

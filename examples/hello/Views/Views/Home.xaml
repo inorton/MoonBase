@@ -6,24 +6,23 @@
       <ColumnDefinition Width="200"/>
       <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
 
+    <ContentControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="2" Content="{Binding Path=ToolbarControl}"/>
 
-    <ScrollViewer Grid.Column="0">
+    <ScrollViewer Grid.Row="1" Grid.Column="0">
       <StackPanel Orientation="Vertical" Margin="3">
-        <Button Content="foo"/>
-<Button Content="foo"/>
-<Button Content="foo"/>
+        <Button Content="Foo"/>
+        <Button Content="Boo"/>
+        <Button Content="Moo"/>
       </StackPanel>
     </ScrollViewer>
-    <StackPanel  Grid.Column="1" Orientation="Vertical" Margin="3">
-    <Button Content="foo"/>
-    <Button Content="foo"/>
+    <StackPanel  Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="3">
+      <Button Content="Bar"/>
+      <Button Content="Baz"/>
     </StackPanel>
-
-
-
-
   </Grid>
-
-
 </UserControl>
