@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "hello\Views\Views.csproj", "{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hello World", "Hello World", "{65BB2B7B-A90F-42EF-961C-C56820272EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonProgram", "hello\MoonProgram\MoonProgram.csproj", "{9EC65C74-9A26-4B8B-BF9C-C856A103392C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "hello\ViewModels\ViewModels.csproj", "{99966BD3-58B7-412D-9E06-CB9E6169753E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonProgram", "hello\MoonProgram\MoonProgram.csproj", "{9EC65C74-9A26-4B8B-BF9C-C856A103392C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "hello\Views\Views.csproj", "{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,11 @@ Global
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|x86.Build.0 = Debug|x86
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9EC65C74-9A26-4B8B-BF9C-C856A103392C} = {65BB2B7B-A90F-42EF-961C-C56820272EF2}
+		{99966BD3-58B7-412D-9E06-CB9E6169753E} = {65BB2B7B-A90F-42EF-961C-C56820272EF2}
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A} = {65BB2B7B-A90F-42EF-961C-C56820272EF2}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = hello\MoonProgram\MoonProgram.csproj

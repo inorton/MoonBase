@@ -27,7 +27,7 @@ Global
 		{2A1A91BB-D576-47E0-A365-6D2418C0235D} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MoonWindow\Mono.MoonDesk.MoonWindow.csproj
+		StartupItem = Mono.MoonDesk.MoonWindow\Mono.MoonDesk.MoonWindow.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
