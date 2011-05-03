@@ -7,24 +7,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.MoonWindow", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.ViewLoader", "Mono.MoonDesk.ViewLoader\Mono.MoonDesk.ViewLoader.csproj", "{2A1A91BB-D576-47E0-A365-6D2418C0235D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.Commands", "Mono.MoonDesk.Commands\Mono.MoonDesk.Commands.csproj", "{494C0915-13A8-42AF-A0CD-ECFB2401E75E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Debug|x86.Build.0 = Debug|Any CPU
-		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Release|x86.ActiveCfg = Release|Any CPU
-		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Release|x86.Build.0 = Release|Any CPU
-		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|x86.Build.0 = Debug|Any CPU
-		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|x86.ActiveCfg = Release|Any CPU
-		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|x86.Build.0 = Release|Any CPU
+		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1A91BB-D576-47E0-A365-6D2418C0235D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{494C0915-13A8-42AF-A0CD-ECFB2401E75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494C0915-13A8-42AF-A0CD-ECFB2401E75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494C0915-13A8-42AF-A0CD-ECFB2401E75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494C0915-13A8-42AF-A0CD-ECFB2401E75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
 		{2A1A91BB-D576-47E0-A365-6D2418C0235D} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
+		{494C0915-13A8-42AF-A0CD-ECFB2401E75E} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Mono.MoonDesk.MoonWindow\Mono.MoonDesk.MoonWindow.csproj

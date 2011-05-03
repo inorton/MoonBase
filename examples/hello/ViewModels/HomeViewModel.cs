@@ -19,5 +19,11 @@ namespace MoonBase.Examples
       }
     }
 
+    public string SomeProperty {
+      get {
+        return "Hello Guv";
+      }
+    }
+
   }
 }

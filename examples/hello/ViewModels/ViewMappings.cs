@@ -6,9 +6,10 @@ namespace MoonBase.Examples
 {
   public class ViewMappings : ViewResolver
   {
-    public static ViewMappings Resolver = new ViewMappings();
+    public static Moonlight.Gtk.MoonlightHost MoonlightHost = null;
+    public static ViewMappings Resolver = new ViewMappings( MoonlightHost );
 
-    public ViewMappings () : base()
+    public ViewMappings ( Moonlight.Gtk.MoonlightHost host ) : base( host )
     {
     }
 

@@ -6,6 +6,8 @@ using System.Windows.Resources;
 using System.Windows.Markup;
 using System.Windows.Controls;
 
+using Moonlight.Gtk;
+
 namespace MoonDesk
 {
   public class XamlViewBase {
@@ -31,10 +33,14 @@ namespace MoonDesk
 
   public class ViewLoader
   {
+    public MoonlightHost Host { get; private set; }
+
     /// <summary>
     /// Initializes a new instance of the <see cref="MoonDesk.ViewLoader"/> class.
     /// </summary>
-    public ViewLoader() { }
+    public ViewLoader( MoonlightHost mhost ) {
+      Host = mhost;
+    }
 
     /// <summary>
     /// Loads the view xaml.
@@ -65,7 +71,12 @@ namespace MoonDesk
       }
 
       if ( xamlstr != null ){
-        view = XamlReader.Load( xamlstr ) as FrameworkElement;
+        if ( Host == null ) {
+          view = XamlReader.Load( xamlstr ) as FrameworkElement;
+        } else {
+          view = Host.CreateElementFromString( xamlstr, true ) as FrameworkElement;
+        }
+
         if ( (view != null ) && ( dataContext != null ) )
           view.DataContext = dataContext;
       }

@@ -34,6 +34,18 @@
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
       <Package>moonlight-gtk-2.0</Package>
     </Reference>
+    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>moonlight-desktop-2.0</Package>
+    </Reference>
+    <Reference Include="System.Windows.Browser, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>moonlight-desktop-2.0</Package>
+    </Reference>
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>moonlight-desktop-2.0</Package>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>moonlight-desktop-2.0</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />

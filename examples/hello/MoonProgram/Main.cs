@@ -21,6 +21,7 @@ namespace MyApp
       var win = new MoonWindow ();
 
       // Load embedded xaml from resource
+      ViewMappings.MoonlightHost = win.Host;
       var home = ViewMappings.Resolver.GetHomeView();
       win.Content = home.View;
 

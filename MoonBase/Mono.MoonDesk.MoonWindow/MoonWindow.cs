@@ -26,6 +26,10 @@ namespace MoonDesk
 
     }
 
+    public MoonlightHost Host {
+      get { return _host; }
+    }
+
     /// <summary>
     /// Gets or sets the content.
     /// </summary>

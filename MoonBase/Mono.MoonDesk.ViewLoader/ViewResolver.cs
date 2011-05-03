@@ -12,7 +12,12 @@ namespace MoonDesk
 
     public ViewResolver ( )
     {
-      Loader = new ViewLoader( );
+      Loader = new ViewLoader( null );
+    }
+
+    public ViewResolver ( Moonlight.Gtk.MoonlightHost host )
+    {
+      Loader = new ViewLoader( host );
     }
 
   }

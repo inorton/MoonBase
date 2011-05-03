@@ -19,7 +19,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="cp /usr/local/lib/moonbase/* ${TargetDir}" workingdir="${TargetDir}" externalConsole="true" />
+        <Command type="AfterBuild" command="cp /usr/local/lib/mono/moonlight/* ${TargetDir}" workingdir="${TargetDir}" externalConsole="true" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -37,6 +37,16 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <WarningLevel>4</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp /usr/local/lib/mono/moonlight/* ${TargetDir}" workingdir="${TargetDir}" externalConsole="true" />
+      </CustomCommands>
+    </CustomCommands>
+    <EnvironmentVariables>
+      <EnvironmentVariables>
+        <Variable name="MOON_USE_MANAGED_XAML_PARSER" value="1" />
+      </EnvironmentVariables>
+    </EnvironmentVariables>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -53,12 +63,20 @@
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.0.0, Culture=neutral">
-    </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.0.0, Culture=neutral">
-    </Reference>
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
       <Package>moonlight-gtk-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonWindow\bin\Debug\Mono.MoonDesk.MoonWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -97,4 +115,9 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ApplicationDefinition Include="AppManifest.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ApplicationDefinition>
+  </ItemGroup>
 </Project>

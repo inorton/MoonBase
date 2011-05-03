@@ -57,6 +57,7 @@ EXTRAS = \
 	mono.moondesk.viewloader.pc.in 
 
 REFERENCES =  \
+	-pkg:moonlight-desktop-2.0 \
 	-pkg:moonlight-gtk-2.0 \
 	System
 

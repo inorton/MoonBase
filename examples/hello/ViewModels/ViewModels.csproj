@@ -41,8 +41,13 @@
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
       <Package>moonlight-gtk-2.0</Package>
     </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.0.0, Culture=neutral">
-      <Package>mono.moondesk.viewloader</Package>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
