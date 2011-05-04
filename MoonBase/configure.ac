@@ -23,35 +23,33 @@ if test "x$GMCS" = "xno"; then
 fi
 
 
-AC_ARG_ENABLE(debug_x86,
-	AC_HELP_STRING([--enable-debug_x86],
-		[Use 'DEBUG_X86' Configuration [default=YES]]),
-		enable_debug_x86=yes, enable_debug_x86=no)
-AM_CONDITIONAL(ENABLE_DEBUG_X86, test x$enable_debug_x86 = xyes)
-if test "x$enable_debug_x86" = "xyes" ; then
+AC_ARG_ENABLE(debug,
+	AC_HELP_STRING([--enable-debug],
+		[Use 'DEBUG' Configuration [default=YES]]),
+		enable_debug=yes, enable_debug=no)
+AM_CONDITIONAL(ENABLE_DEBUG, test x$enable_debug = xyes)
+if test "x$enable_debug" = "xyes" ; then
 	CONFIG_REQUESTED="yes"
 fi
-AC_ARG_ENABLE(release_x86,
-	AC_HELP_STRING([--enable-release_x86],
-		[Use 'RELEASE_X86' Configuration [default=NO]]),
-		enable_release_x86=yes, enable_release_x86=no)
-AM_CONDITIONAL(ENABLE_RELEASE_X86, test x$enable_release_x86 = xyes)
-if test "x$enable_release_x86" = "xyes" ; then
+AC_ARG_ENABLE(release,
+	AC_HELP_STRING([--enable-release],
+		[Use 'RELEASE' Configuration [default=NO]]),
+		enable_release=yes, enable_release=no)
+AM_CONDITIONAL(ENABLE_RELEASE, test x$enable_release = xyes)
+if test "x$enable_release" = "xyes" ; then
 	CONFIG_REQUESTED="yes"
 fi
 if test -z "$CONFIG_REQUESTED" ; then
-	AM_CONDITIONAL(ENABLE_DEBUG_X86, true)
-	enable_debug_x86=yes
+	AM_CONDITIONAL(ENABLE_DEBUG, true)
+	enable_debug=yes
 fi
 
 
 dnl package checks, common for all configs
 PKG_CHECK_MODULES([GTK_SHARP_20], [gtk-sharp-2.0])
 PKG_CHECK_MODULES([GLIB_SHARP_20], [glib-sharp-2.0])
-PKG_CHECK_MODULES([GLIB_SHARP_20], [moonlight-desktop-2.0])
-PKG_CHECK_MODULES([GLIB_SHARP_20], [moonlight-gtk-2.0])
-
-
+PKG_CHECK_MODULES([MOONLIGHT_GTK_40], [moonlight-gtk-4.0])
+PKG_CHECK_MODULES([MOONLIGHT_DESKTOP_40], [moonlight-desktop-4.0])
 
 dnl package checks, per config
 
@@ -61,6 +59,8 @@ Mono.MoonDesk.MoonWindow/mono.moondesk.moonwindow.pc
 Mono.MoonDesk.MoonWindow/Makefile
 Mono.MoonDesk.ViewLoader/mono.moondesk.viewloader.pc
 Mono.MoonDesk.ViewLoader/Makefile
+Mono.MoonDesk.Commands/mono.moondesk.commands.pc
+Mono.MoonDesk.Commands/Makefile
 Makefile
 
 ])

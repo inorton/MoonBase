@@ -6,27 +6,27 @@ EXTRA_DIST =
 if ENABLE_DEBUG
 ASSEMBLY_COMPILER_COMMAND = gmcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize- -debug "-define:DEBUG"
-ASSEMBLY = bin/Debug/Mono.MoonDesk.ViewLoader.dll
+ASSEMBLY = bin/Debug/Mono.MoonDesk.Commands.dll
 ASSEMBLY_MDB = $(ASSEMBLY).mdb
 COMPILE_TARGET = library
 PROJECT_REFERENCES = 
 BUILD_DIR = bin/Debug
 
-MONO_MOONDESK_VIEWLOADER_DLL_MDB_SOURCE=bin/Debug/Mono.MoonDesk.ViewLoader.dll.mdb
-MONO_MOONDESK_VIEWLOADER_DLL_MDB=$(BUILD_DIR)/Mono.MoonDesk.ViewLoader.dll.mdb
+MONO_MOONDESK_COMMANDS_DLL_MDB_SOURCE=bin/Debug/Mono.MoonDesk.Commands.dll.mdb
+MONO_MOONDESK_COMMANDS_DLL_MDB=$(BUILD_DIR)/Mono.MoonDesk.Commands.dll.mdb
 
 endif
 
 if ENABLE_RELEASE
 ASSEMBLY_COMPILER_COMMAND = gmcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize-
-ASSEMBLY = bin/Release/Mono.MoonDesk.ViewLoader.dll
+ASSEMBLY = bin/Release/Mono.MoonDesk.Commands.dll
 ASSEMBLY_MDB = 
 COMPILE_TARGET = library
 PROJECT_REFERENCES = 
 BUILD_DIR = bin/Release
 
-MONO_MOONDESK_VIEWLOADER_DLL_MDB=
+MONO_MOONDESK_COMMANDS_DLL_MDB=
 
 endif
 
@@ -34,32 +34,30 @@ AL=al2
 SATELLITE_ASSEMBLY_NAME=$(notdir $(basename $(ASSEMBLY))).resources.dll
 
 PROGRAMFILES = \
-	$(MONO_MOONDESK_VIEWLOADER_DLL_MDB)  
+	$(MONO_MOONDESK_COMMANDS_DLL_MDB)  
 
 LINUX_PKGCONFIG = \
-	$(MONO_MOONDESK_VIEWLOADER_PC)  
+	$(MONO_MOONDESK_COMMANDS_PC)  
 
 
 RESGEN=resgen2
 	
 all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
-FILES = \
+FILES =  \
 	AssemblyInfo.cs \
-	ViewLoader.cs \
-	ViewResolver.cs 
+	Command.cs 
 
 DATA_FILES = 
 
 RESOURCES = 
 
 EXTRAS = \
-	mono.moondesk.viewloader.pc.in 
+	mono.moondesk.commands.pc.in 
 
 REFERENCES =  \
-	System \
-	$(MOONLIGHT_GTK_40_LIBS) \
-	$(MOONLIGHT_DESKTOP_40_LIBS)
+	-pkg:moonlight-desktop-4.0 \
+	System
 
 DLL_REFERENCES = 
 
@@ -67,9 +65,9 @@ CLEANFILES = $(PROGRAMFILES) $(LINUX_PKGCONFIG)
 
 include $(top_srcdir)/Makefile.include
 
-MONO_MOONDESK_VIEWLOADER_PC = $(BUILD_DIR)/mono.moondesk.viewloader.pc
+MONO_MOONDESK_COMMANDS_PC = $(BUILD_DIR)/mono.moondesk.commands.pc
 
-$(eval $(call emit-deploy-wrapper,MONO_MOONDESK_VIEWLOADER_PC,mono.moondesk.viewloader.pc))
+$(eval $(call emit-deploy-wrapper,MONO_MOONDESK_COMMANDS_PC,mono.moondesk.commands.pc))
 
 
 $(eval $(call emit_resgen_targets))

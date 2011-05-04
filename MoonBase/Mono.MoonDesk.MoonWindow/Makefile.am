@@ -3,7 +3,7 @@ EXTRA_DIST =
 
 # Warning: This is an automatically generated file, do not edit!
 
-if ENABLE_DEBUG_X86
+if ENABLE_DEBUG
 ASSEMBLY_COMPILER_COMMAND = gmcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize- -debug "-define:DEBUG"
 ASSEMBLY = bin/Debug/Mono.MoonDesk.MoonWindow.dll
@@ -18,7 +18,7 @@ APPMANIFEST_XAML_SOURCE=AppManifest.xaml
 
 endif
 
-if ENABLE_RELEASE_X86
+if ENABLE_RELEASE
 ASSEMBLY_COMPILER_COMMAND = gmcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize-
 ASSEMBLY = bin/Release/Mono.MoonDesk.MoonWindow.dll
@@ -47,7 +47,7 @@ RESGEN=resgen2
 	
 all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
-FILES =  \
+FILES = \
 	AssemblyInfo.cs \
 	MoonWindow.cs 
 
@@ -59,15 +59,13 @@ EXTRAS = \
 	mono.moondesk.moonwindow.pc.in 
 
 REFERENCES =  \
-	-pkg:glib-sharp-2.0 \
-	-pkg:gtk-sharp-2.0 \
-	-pkg:moonlight-gtk-2.0 \
-	System
+	System \
+	$(GTK_SHARP_20_LIBS) \
+	$(GLIB_SHARP_20_LIBS) \
+	$(MOONLIGHT_GTK_40_LIBS) \
+	$(MOONLIGHT_DESKTOP_40_LIBS)
 
-DLL_REFERENCES =  \
-	../../../../../../../usr/lib/mono/moonlight/Moonlight.Gtk.dll \
-	../../../../../../../usr/lib/mono/moonlight/Moon.Windows.Desktop.dll \
-	../../../../../../../usr/lib/mono/moonlight/System.Windows.dll
+DLL_REFERENCES = 
 
 CLEANFILES = $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
