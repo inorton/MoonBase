@@ -57,7 +57,8 @@ EXTRAS = \
 
 REFERENCES =  \
 	-pkg:moonlight-desktop-4.0 \
-	System
+	System \
+	System.Core
 
 DLL_REFERENCES = 
 

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using MoonDesk;
+using Mono.MoonDesk;
 
 namespace MoonBase.Examples
 {

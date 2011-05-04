@@ -23,7 +23,9 @@ namespace MoonDesk
 
       // hack else XamlLoader in moonlight 2.x wont find any managed control classes   
       _host.Content = new UserControl();
-
+      this.DestroyEvent += delegate {
+        _host.Content = null;
+     };
     }
 
     public MoonlightHost Host {
@@ -44,5 +46,7 @@ namespace MoonDesk
         _host.Content = value;
       }
     }
+
+
   }
 }

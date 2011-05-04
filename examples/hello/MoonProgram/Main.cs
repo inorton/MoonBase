@@ -28,6 +28,8 @@ namespace MyApp
 
       win.Show ();
       Gtk.Application.Run ();
+
+      
     }
   }
 }

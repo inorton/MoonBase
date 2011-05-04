@@ -1,29 +1,46 @@
 using System;
-using MoonDesk;
 using System.Windows;
+using System.Windows.Controls;
+using Mono.MoonDesk.Commands;
+using Mono.MoonDesk;
 
 namespace MoonBase.Examples
 {
   public class HomeViewModel : ViewModelBase
   {
-    
-    public HomeViewModel ()
+    int clickCount = 0;
+
+    public HomeViewModel()
     {
+      TestCommand = new DelegateCommand( RunTestCommand, CanTestCommand );
+
     }
 
     private XamlView<ToolbarViewModel> _toolbar;
     public FrameworkElement ToolbarControl {
       get {
-        _toolbar = Resolver.GetHomeToolbar();
-        return _toolbar.View;
+        _toolbar = ViewMappings.Resolver.GetHomeToolbar();
+        if ( _toolbar != null )
+          return _toolbar.View;
+
+        return null;
       }
     }
 
-    public string SomeProperty {
-      get {
-        return "Hello Guv";
-      }
+    public string TestButtonText {
+      get { return String.Format("Click Me ({0})", clickCount ); }
+    }
+    public DelegateCommand TestCommand { get; set; }
+
+    public void RunTestCommand( object param )
+    {
+      clickCount++;
+      OnPropertyChanged( "TestButtonText" );
     }
 
+    public bool CanTestCommand( object param )
+    {
+      return true;
+    }
   }
 }

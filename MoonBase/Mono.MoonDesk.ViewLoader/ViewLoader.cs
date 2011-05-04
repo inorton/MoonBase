@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 using Moonlight.Gtk;
 
-namespace MoonDesk
+namespace Mono.MoonDesk
 {
   public class XamlViewBase {
     /// <summary>

@@ -1,12 +1,6 @@
 <UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mb="clr-namespace:Mono.MoonDesk.Commands"
              >
-<UserControl.Resources><!--
-  <mb:Utils x:Key="x"/>
-  -->
-</UserControl.Resources>
-
   <Grid>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="200"/>
@@ -21,7 +15,7 @@
 
     <ScrollViewer Grid.Row="1" Grid.Column="0">
       <StackPanel Orientation="Vertical" Margin="3">
-        <Button Content="Click Me" mb:Utils.Command="test" />
+        <Button Content="{Binding Path=TestButtonText}" Command="{Binding Path=TestCommand}"/>
         <Button Content="1"/>
         <Button Content="2"/>
       </StackPanel>

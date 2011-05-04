@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace MoonDesk
+namespace Mono.MoonDesk
 {
   public class ViewResolver {
 

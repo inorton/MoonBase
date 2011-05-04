@@ -47,7 +47,7 @@ RESGEN=resgen2
 	
 all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
-FILES = \
+FILES =  \
 	AssemblyInfo.cs \
 	MoonWindow.cs 
 
@@ -59,11 +59,11 @@ EXTRAS = \
 	mono.moondesk.moonwindow.pc.in 
 
 REFERENCES =  \
-	System \
-	$(GTK_SHARP_20_LIBS) \
-	$(GLIB_SHARP_20_LIBS) \
-	$(MOONLIGHT_GTK_40_LIBS) \
-	$(MOONLIGHT_DESKTOP_40_LIBS)
+	-pkg:glib-sharp-2.0 \
+	-pkg:gtk-sharp-2.0 \
+	-pkg:moonlight-desktop-4.0 \
+	-pkg:moonlight-gtk-4.0 \
+	System
 
 DLL_REFERENCES = 
 
