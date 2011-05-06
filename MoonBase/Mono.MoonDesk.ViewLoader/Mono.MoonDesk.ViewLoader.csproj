@@ -59,10 +59,4 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <ProjectReference Include="..\Mono.MoonDesk.Commands\Mono.MoonDesk.Commands.csproj">
-      <Project>{494C0915-13A8-42AF-A0CD-ECFB2401E75E}</Project>
-      <Name>Mono.MoonDesk.Commands</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
