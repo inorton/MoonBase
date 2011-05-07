@@ -58,7 +58,6 @@ EXTRAS = \
 	mono.moondesk.viewloader.pc.in 
 
 REFERENCES =  \
-	../Mono.MoonDesk.Commands/bin/Debug/Mono.MoonDesk.Commands.dll \
 	-pkg:moonlight-desktop-4.0 \
 	-pkg:moonlight-gtk-4.0 \
 	System
