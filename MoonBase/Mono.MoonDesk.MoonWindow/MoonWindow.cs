@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace MoonDesk
+namespace Mono.MoonDesk
 {
   public class MoonWindow : Gtk.Window
   {

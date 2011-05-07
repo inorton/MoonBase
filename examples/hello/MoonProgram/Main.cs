@@ -6,7 +6,7 @@ using System.Windows.Markup;
 using System.Windows.Controls;
 using Moonlight.Gtk;
 using MoonBase.Examples;
-using MoonDesk;
+using Mono.MoonDesk;
 
 namespace MyApp
 {
