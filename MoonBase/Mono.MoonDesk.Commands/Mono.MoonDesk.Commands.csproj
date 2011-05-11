@@ -10,6 +10,7 @@
     <RootNamespace>Mono.MoonDesk.Commands</RootNamespace>
     <AssemblyName>Mono.MoonDesk.Commands</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AssemblyOriginatorKeyFile>..\moonbase.key</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

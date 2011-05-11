@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("Mono.MoonDesk.Commands")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("MVVM Commands for Moonlight")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("inb")]
+[assembly: AssemblyCopyright("Ian Norton (c) 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -22,5 +22,5 @@ using System.Runtime.CompilerServices;
 // The following attributes are used to specify the signing key for the assembly, 
 // if desired. See the Mono documentation for more information about signing.
 
-//[assembly: AssemblyDelaySign(false)]
-//[assembly: AssemblyKeyFile("")]
+[assembly: AssemblyDelaySign(false)]
+[assembly: AssemblyKeyFile("../moonbase.key")]

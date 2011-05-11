@@ -70,6 +70,18 @@
     <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.4146.28162, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonWindow\bin\Debug\Mono.MoonDesk.MoonWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4146.28111, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4146.28111, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
