@@ -83,8 +83,9 @@ namespace Mono.MoonDesk
 
         if ( (view != null ) && ( dataContext != null ) ){
           var fe = view as FrameworkElement;
-          if ( fe != null )
+          if ( fe != null ){
             fe.DataContext = dataContext;
+          }
         }
       }
 
@@ -142,10 +143,14 @@ namespace Mono.MoonDesk
     {
       var view = LoadViewXaml( assembly, viewfile, vm );
 
-
       var xv = new XamlView<VMType>();
       xv.View = view;
       xv.ViewModel = vm;
+
+      var vmb = xv.ViewModel as MoonDesk.ViewModelBase;
+      if ( vmb != null )
+        vmb.View = view;
+
 
       return xv;
     }

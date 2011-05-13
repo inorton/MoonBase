@@ -37,22 +37,26 @@
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d" />
-    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.4150.28915, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.4150.39825, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonWindow\bin\Debug\Mono.MoonDesk.MoonWindow.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4150.28915, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4150.39826, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4150.29245, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4150.40784, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="slp-sharp, Version=1.0.4150.24934, Culture=neutral, PublicKeyToken=3830cc4911be674f">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="slp-sharp, Version=1.0.4150.39789, Culture=neutral, PublicKeyToken=3830cc4911be674f">
       <Package>slp-sharp</Package>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

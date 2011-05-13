@@ -54,8 +54,14 @@ namespace AsyncCore
 
     private void StartOperation()
     {
-      if ( Operation != null )
+      if ( Operation != null ){
         Operation();
+        if ( terminating == false ){
+          if ( OnFinish != null ){
+            Dispatcher.BeginInvoke( OnFinish );
+          }
+        }
+      }
     }
     
     private void Execute()

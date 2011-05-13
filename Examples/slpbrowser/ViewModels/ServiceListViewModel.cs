@@ -13,35 +13,40 @@ namespace ViewModels
   {
     public SlpModel.SlpModel Model { get; set; }
     private Task RefreshTask = null;
+    private ObservableCollection<Service> _servers;
 
     public ObservableCollection<Service> Servers { get {
-        if ( Model == null ) return null;
-        return Model.Services;
-      } }
+        return _servers; } }
 
     public ServiceListViewModel ()
     {
+      _servers = new ObservableCollection<Service>();
       Model = new SlpModel.SlpModel();
+      Model.ClearServices = delegate {
+        View.Dispatcher.BeginInvoke( delegate {
+          _servers.Clear();
+        } );
+      };
 
+      Model.AddService = delegate(Service obj) {
+        View.Dispatcher.BeginInvoke ( delegate {
+          _servers.Add( obj );
+        } );
+      };
 
-      RefreshCommand = new DelegateCommand( BeginRefresh, CanRefresh );
-
-
+      RefreshCommand = new DelegateCommand( BeginRefresh, delegate ( object arg ) { return CanRefresh; } );
     }
     public DelegateCommand RefreshCommand { get; set; }
 
-    public bool CanRefresh( object unused )
-    {
-      return !Refreshing;
-    }
-
     public bool Refreshing { get; set; }
+    public bool CanRefresh { get { return !Refreshing; } }
 
     public void EndRefresh( object unused )
     {
+      Refreshing = false;
       OnPropertyChanged("Refreshing");
       OnPropertyChanged("CanRefresh");
-      Refreshing = false;
+      Console.WriteLine("finished");
     }
 
     public void BeginRefresh( object unused )

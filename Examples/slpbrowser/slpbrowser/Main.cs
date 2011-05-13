@@ -25,7 +25,7 @@ namespace slpbrowser
 
       var slist = resolver.Loader.LoadView<ServiceListViewModel>( "Views;Views/Views/ServiceList.xaml");
 
-      win.Content = slist.View;
+      win.Content = slist.View as System.Windows.FrameworkElement;
 
       win.Show ();
       Gtk.Application.Run ();
