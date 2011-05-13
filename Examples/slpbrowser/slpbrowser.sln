@@ -3,16 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slpbrowser", "slpbrowser\slpbrowser.csproj", "{C0B09E14-1A4D-43CE-8CBE-6F65A3E6C09B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCore", "AsyncCore\AsyncCore.csproj", "{F4D48284-EEE3-4EEF-913A-DC67CCF1FEC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlpModel", "SlpModel\SlpModel.csproj", "{A899FDD9-1173-444B-865A-C66DE8941E16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A899FDD9-1173-444B-865A-C66DE8941E16}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A899FDD9-1173-444B-865A-C66DE8941E16}.Debug|x86.Build.0 = Debug|Any CPU
+		{A899FDD9-1173-444B-865A-C66DE8941E16}.Release|x86.ActiveCfg = Release|Any CPU
+		{A899FDD9-1173-444B-865A-C66DE8941E16}.Release|x86.Build.0 = Release|Any CPU
 		{C0B09E14-1A4D-43CE-8CBE-6F65A3E6C09B}.Debug|x86.ActiveCfg = Debug|x86
 		{C0B09E14-1A4D-43CE-8CBE-6F65A3E6C09B}.Debug|x86.Build.0 = Debug|x86
 		{C0B09E14-1A4D-43CE-8CBE-6F65A3E6C09B}.Release|x86.ActiveCfg = Release|x86
 		{C0B09E14-1A4D-43CE-8CBE-6F65A3E6C09B}.Release|x86.Build.0 = Release|x86
+		{F4D48284-EEE3-4EEF-913A-DC67CCF1FEC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4D48284-EEE3-4EEF-913A-DC67CCF1FEC1}.Debug|x86.Build.0 = Debug|Any CPU
+		{F4D48284-EEE3-4EEF-913A-DC67CCF1FEC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{F4D48284-EEE3-4EEF-913A-DC67CCF1FEC1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = slpbrowser\slpbrowser.csproj
