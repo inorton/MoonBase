@@ -1,0 +1,6 @@
+<WorkspaceItem ctype="Workspace">
+  <Items>
+    <Item>hello/hello.sln</Item>
+    <Item>slpbrowser/slpbrowser.sln</Item>
+  </Items>
+</WorkspaceItem>
