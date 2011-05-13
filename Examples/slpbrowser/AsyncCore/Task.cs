@@ -44,9 +44,18 @@ namespace AsyncCore
         throw new InvalidAsynchronousStateException("this task has already started");
       if ( Operation == null )
         throw new ArgumentNullException("no operation");
-      
+
+      operationThread = new Thread( StartOperation );
       waitThread = new Thread( Execute );
+      terminating = false;
       waitThread.Start();
+
+    }
+
+    private void StartOperation()
+    {
+      if ( Operation != null )
+        Operation();
     }
     
     private void Execute()

@@ -17,7 +17,7 @@ namespace Mono.MoonDesk
     /// <value>
     /// The view.
     /// </value>
-    public FrameworkElement View { get; set; }
+    public DependencyObject View { get; set; }
   }
 
   public class XamlView<VMType> : XamlViewBase
@@ -57,12 +57,16 @@ namespace Mono.MoonDesk
     /// <param name='dataContext'>
     /// Data context.
     /// </param>
-    public FrameworkElement LoadViewXaml( string assemblyName, string manifestName, object dataContext )
+    public DependencyObject LoadViewXaml( string assemblyName, string manifestName, object dataContext )
     {
-      FrameworkElement view = null;
+      DependencyObject view = null;
 
       var asm = Assembly.Load( assemblyName );
       var stream = asm.GetManifestResourceStream( manifestName );
+
+      if ( stream == null )
+        throw new InvalidDataException( String.Format("missing resource {1} in {0}", assemblyName, manifestName ));
+
 
       var xamlstr = String.Empty;
 
@@ -74,11 +78,14 @@ namespace Mono.MoonDesk
         if ( Host == null ) {
           view = XamlReader.Load( xamlstr ) as FrameworkElement;
         } else {
-          view = Host.CreateElementFromString( xamlstr, true ) as FrameworkElement;
+          view = Host.CreateElementFromString( xamlstr, true ) as DependencyObject;
         }
 
-        if ( (view != null ) && ( dataContext != null ) )
-          view.DataContext = dataContext;
+        if ( (view != null ) && ( dataContext != null ) ){
+          var fe = view as FrameworkElement;
+          if ( fe != null )
+            fe.DataContext = dataContext;
+        }
       }
 
       return view;
@@ -109,7 +116,7 @@ namespace Mono.MoonDesk
           return LoadView<VMType>( asmname, ppath, new VMType() );
         }
       }
-      return null; // must be relative path
+      throw new InvalidDataException("resource path invalid");
     }
 
     /// <summary>
@@ -134,6 +141,7 @@ namespace Mono.MoonDesk
       where VMType : class
     {
       var view = LoadViewXaml( assembly, viewfile, vm );
+
 
       var xv = new XamlView<VMType>();
       xv.View = view;

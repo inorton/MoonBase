@@ -7,12 +7,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCore", "AsyncCore\Asyn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlpModel", "SlpModel\SlpModel.csproj", "{A899FDD9-1173-444B-865A-C66DE8941E16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{67035813-578D-4EAF-A304-647872C7DB06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{38A57CC8-3497-42A6-B93F-E557D178E6A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A57CC8-3497-42A6-B93F-E557D178E6A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38A57CC8-3497-42A6-B93F-E557D178E6A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{38A57CC8-3497-42A6-B93F-E557D178E6A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{38A57CC8-3497-42A6-B93F-E557D178E6A7}.Release|x86.Build.0 = Release|Any CPU
+		{67035813-578D-4EAF-A304-647872C7DB06}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{67035813-578D-4EAF-A304-647872C7DB06}.Debug|x86.Build.0 = Debug|Any CPU
+		{67035813-578D-4EAF-A304-647872C7DB06}.Release|x86.ActiveCfg = Release|Any CPU
+		{67035813-578D-4EAF-A304-647872C7DB06}.Release|x86.Build.0 = Release|Any CPU
 		{A899FDD9-1173-444B-865A-C66DE8941E16}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{A899FDD9-1173-444B-865A-C66DE8941E16}.Debug|x86.Build.0 = Debug|Any CPU
 		{A899FDD9-1173-444B-865A-C66DE8941E16}.Release|x86.ActiveCfg = Release|Any CPU

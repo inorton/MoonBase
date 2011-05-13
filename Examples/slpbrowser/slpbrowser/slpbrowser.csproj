@@ -34,10 +34,47 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d" />
+    <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.4150.28915, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonWindow\bin\Debug\Mono.MoonDesk.MoonWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4150.28915, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4150.29245, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="slp-sharp, Version=1.0.4150.24934, Culture=neutral, PublicKeyToken=3830cc4911be674f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>slp-sharp</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\AsyncCore\AsyncCore.csproj">
+      <Project>{F4D48284-EEE3-4EEF-913A-DC67CCF1FEC1}</Project>
+      <Name>AsyncCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SlpModel\SlpModel.csproj">
+      <Project>{A899FDD9-1173-444B-865A-C66DE8941E16}</Project>
+      <Name>SlpModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj">
+      <Project>{67035813-578D-4EAF-A304-647872C7DB06}</Project>
+      <Name>ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Views\Views.csproj">
+      <Project>{38A57CC8-3497-42A6-B93F-E557D178E6A7}</Project>
+      <Name>Views</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

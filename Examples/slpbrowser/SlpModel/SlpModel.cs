@@ -3,17 +3,22 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 
-using AsyncCore;
 using SlpSharp;
 
 namespace SlpModel
 {
   public class SlpModel
   {
+    public SlpModel()
+    {
+      Services = new ObservableCollection<Service>();
+    }
+
     public void Refresh()
     {
       Services.Clear();
       // find service types
+
       using ( var slp = new SlpClient( null ) ){
         slp.FindTypes( string.Empty, null, delegate ( string type ){
           
@@ -25,8 +30,7 @@ namespace SlpModel
         } );
       }
     }
-    
-    
+
     public ObservableCollection<Service> Services { get; private set; }
     
   }

@@ -1,0 +1,15 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+
+  <StackPanel>
+    <Button Content="Refresh" Command="{Binding Path=RefreshCommand}" IsEnabled="{Binding Path=CanRefresh}" />
+    
+    <ListBox MinHeight="300" ItemsSource="{Binding Path=Servers}">
+    
+    </ListBox>
+    
+  </StackPanel>
+             
+
+</UserControl>

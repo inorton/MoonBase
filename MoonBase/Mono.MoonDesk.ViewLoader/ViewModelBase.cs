@@ -12,7 +12,7 @@ namespace Mono.MoonDesk
     {
     }
 
-    public FrameworkElement View { get; set; }
+    public DependencyObject View { get; set; }
 
     protected void OnPropertyChanged( string propertyName )
     {
