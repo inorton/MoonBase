@@ -26,7 +26,7 @@ that comes with it)
     // or load from a xaml resource file and create your view model at the same time
     var resolver = new Resolver()
     var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
-    host.Content = mvvm.View;
+    host.Content = mvvm.View as FrameworkElement;
     host.Show();
 
     Gtk.Application.Run();
@@ -38,6 +38,18 @@ MoonDesk itself isn't really aiming to provide a windows/mono portable gui
 toolkit but should let you share more code between windows and linux versions
 of GUI applications.
 
+There are two included examples.
+
+"hello"
+ A simple form with a handful of views and view models, shows
+ a simple command binding that increments a value in the view model.
+ Also shows binding other controls into containers using ContentControl
+ ( rather like frame src= in html )
+
+"slpbrowser"
+ A more complex example, requires slp-sharp. An asynchronous mvvm 
+ program that uses the service discovery protocol (SLP) to refresh
+ a list on screen without blocking the gui.
 
 BSD License
 ------------
