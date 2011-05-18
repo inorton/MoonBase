@@ -23,7 +23,7 @@ namespace MyApp
       // Load embedded xaml from resource
       ViewMappings.MoonlightHost = win.Host;
       var home = ViewMappings.Resolver.GetHomeView();
-      win.Content = home.View;
+      win.Content = home.View as FrameworkElement;
 
 
       win.Show ();
