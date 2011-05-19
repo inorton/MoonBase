@@ -49,10 +49,6 @@
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d" />
-    <Reference Include="slp-sharp, Version=1.0.4150.39789, Culture=neutral, PublicKeyToken=3830cc4911be674f">
-      <Package>slp-sharp</Package>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="Mono.MoonDesk.MoonWindow, Version=1.0.4150.28915, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
