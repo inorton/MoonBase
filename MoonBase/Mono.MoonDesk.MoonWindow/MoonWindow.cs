@@ -6,29 +6,21 @@ using System.Windows.Media;
 
 namespace Mono.MoonDesk
 {
-  public class MoonWindow : Gtk.Window
+  public class MoonWindow : Gtk.Window, ISilverlightContainer
   {
-    private MoonlightHost _host = null;
+    private MoonArea _host = null;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="MoonDesk.MoonWindow"/> class.
     /// </summary>
     public MoonWindow (): base (Gtk.WindowType.Toplevel)
     {
-      _host = new MoonlightHost ();
-      this.WidthRequest = 320;
-      this.HeightRequest = 200;
+      _host = new MoonArea();
       this.Add (_host);
       this.ShowAll ();
-
-      // hack else XamlLoader in moonlight 2.x wont find any managed control classes   
-      _host.Content = new UserControl();
-      this.DestroyEvent += delegate {
-        _host.Content = null;
-     };
     }
 
-    public MoonlightHost Host {
+    public MoonArea Host {
       get { return _host; }
     }
 
@@ -46,7 +38,6 @@ namespace Mono.MoonDesk
         _host.Content = value;
       }
     }
-
 
   }
 }

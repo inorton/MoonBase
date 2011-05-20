@@ -27,6 +27,7 @@ namespace MyApp
 
 
       win.Show ();
+      win.Resize( 640,350 );
       Gtk.Application.Run ();
 
       
