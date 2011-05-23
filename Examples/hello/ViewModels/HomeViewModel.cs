@@ -42,5 +42,11 @@ namespace MoonBase.Examples
     {
       return true;
     }
+
+    public string RunningOOB {
+      get {
+        return System.Windows.Application.Current.IsRunningOutOfBrowser.ToString();
+      }
+    }
   }
 }
