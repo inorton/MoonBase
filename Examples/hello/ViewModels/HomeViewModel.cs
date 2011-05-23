@@ -21,7 +21,7 @@ namespace MoonBase.Examples
       get {
         _toolbar = ViewMappings.Resolver.GetHomeToolbar();
         if ( _toolbar != null )
-          return _toolbar.View;
+          return _toolbar.View as FrameworkElement;
 
         return null;
       }

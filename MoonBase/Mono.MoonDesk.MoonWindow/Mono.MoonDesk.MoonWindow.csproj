@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="MoonWindow.cs" />
+    <Compile Include="ISilverlightContainer.cs" />
+    <Compile Include="MoonArea.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

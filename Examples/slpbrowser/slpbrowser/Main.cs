@@ -28,6 +28,7 @@ namespace slpbrowser
       win.Content = slist.View as System.Windows.FrameworkElement;
 
       win.Show ();
+      win.Resize( 650, 350 );
       Gtk.Application.Run ();
 
 

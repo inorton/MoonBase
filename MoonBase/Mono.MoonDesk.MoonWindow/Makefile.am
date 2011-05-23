@@ -49,6 +49,8 @@ all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG)
 
 FILES =  \
 	AssemblyInfo.cs \
+	ISilverlightContainer.cs \
+	MoonArea.cs \
 	MoonWindow.cs 
 
 DATA_FILES = 
