@@ -1,8 +1,7 @@
 <Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment"
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                                                                       
-EntryPointAssembly="MoonProgram" EntryPointType="System.Windows.Application"
-RuntimeVersion="3.0.40624.0">                                                                                                
+EntryPointAssembly="slpbrowser" EntryPointType="System.Windows.Application"
+RuntimeVersion="3.0.0.0">
   <Deployment.Parts>
-    <AssemblyPart x:Name="Mono.MoonDesk.Commands" Source="Mono.MoonDesk.Commands.dll" />
   </Deployment.Parts>                                                                                                        
 </Deployment>
