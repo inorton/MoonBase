@@ -44,7 +44,7 @@ RESGEN=resgen2
 	
 all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
-FILES =  \
+FILES = \
 	AssemblyInfo.cs \
 	Command.cs 
 
@@ -56,7 +56,7 @@ EXTRAS = \
 	mono.moondesk.commands.pc.in 
 
 REFERENCES =  \
-	-pkg:moonlight-desktop-4.0 \
+	$(MOONLIGHT_DESKTOP_40_LIBS) \
 	System \
 	System.Core
 

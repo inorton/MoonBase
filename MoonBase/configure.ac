@@ -46,21 +46,21 @@ fi
 
 
 dnl package checks, common for all configs
-PKG_CHECK_MODULES([GTK_SHARP_20], [gtk-sharp-2.0])
-PKG_CHECK_MODULES([GLIB_SHARP_20], [glib-sharp-2.0])
 PKG_CHECK_MODULES([MOONLIGHT_GTK_40], [moonlight-gtk-4.0])
 PKG_CHECK_MODULES([MOONLIGHT_DESKTOP_40], [moonlight-desktop-4.0])
+PKG_CHECK_MODULES([GTK_SHARP_20], [gtk-sharp-2.0])
+PKG_CHECK_MODULES([GLIB_SHARP_20], [glib-sharp-2.0])
 
 dnl package checks, per config
 
 
 AC_CONFIG_FILES([
-Mono.MoonDesk.MoonWindow/mono.moondesk.moonwindow.pc
-Mono.MoonDesk.MoonWindow/Makefile
 Mono.MoonDesk.ViewLoader/mono.moondesk.viewloader.pc
 Mono.MoonDesk.ViewLoader/Makefile
 Mono.MoonDesk.Commands/mono.moondesk.commands.pc
 Mono.MoonDesk.Commands/Makefile
+Mono.MoonDesk.MoonBase/mono.moondesk.moonbase.pc
+Mono.MoonDesk.MoonBase/Makefile
 Makefile
 
 ])

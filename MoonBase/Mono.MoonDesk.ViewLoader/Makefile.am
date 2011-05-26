@@ -44,11 +44,11 @@ RESGEN=resgen2
 	
 all: $(ASSEMBLY) $(PROGRAMFILES) $(LINUX_PKGCONFIG) 
 
-FILES =  \
+FILES = \
 	AssemblyInfo.cs \
 	ViewLoader.cs \
-	ViewModelBase.cs \
-	ViewResolver.cs 
+	ViewResolver.cs \
+	ViewModelBase.cs 
 
 DATA_FILES = 
 
@@ -58,8 +58,8 @@ EXTRAS = \
 	mono.moondesk.viewloader.pc.in 
 
 REFERENCES =  \
-	-pkg:moonlight-desktop-4.0 \
-	-pkg:moonlight-gtk-4.0 \
+	$(MOONLIGHT_GTK_40_LIBS) \
+	$(MOONLIGHT_DESKTOP_40_LIBS) \
 	System
 
 DLL_REFERENCES = 

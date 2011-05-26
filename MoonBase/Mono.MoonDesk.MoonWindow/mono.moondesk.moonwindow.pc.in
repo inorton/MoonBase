@@ -1,7 +1,0 @@
-Name: Mono.MoonDesk.MoonWindow
-Description: Mono.MoonDesk.MoonWindow
-Version: 0.1
-
-Libraries: @expanded_libdir@/@PACKAGE@/Mono.MoonDesk.MoonWindow.dll @expanded_libdir@/@PACKAGE@/Mono.MoonDesk.ViewLoader.dll @expanded_libdir@/@PACKAGE@/Mono.MoonDesk.Commands.dll
-Requires: 
-Libs: -r:@expanded_libdir@/@PACKAGE@/Mono.MoonDesk.MoonWindow.dll
