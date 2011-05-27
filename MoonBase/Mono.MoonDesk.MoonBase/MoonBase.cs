@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using Moonlight.Gtk;
 
-namespace Mono.MoonDesk.MoonBase
+namespace Mono.MoonDesk
 {
 	public class MoonBase
 	{
