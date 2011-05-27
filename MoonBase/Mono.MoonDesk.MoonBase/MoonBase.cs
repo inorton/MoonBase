@@ -15,18 +15,24 @@ namespace Mono.MoonDesk
 
     public static void Init( IEnumerable<Assembly> preload )
     {
-      PreloadAssemblies( preload );
       Init();
+      PreloadAssemblies( preload );
     }
 		
 		static void PreloadAssemblies( IEnumerable<Assembly> assemblies )
 		{
-			if ( CanPreloadDesktopAssemblies ){
-				var pi = typeof(System.Windows.Deployment).GetProperty( "PreloadDesktopAssemblies", BindingFlags.Static );
-				IList<Assembly> alist = pi.GetValue( null, null ) as IList<Assembly>;
-				if ( alist != null )
-					foreach (var a in assemblies)
-						alist.Add( a );
+			if ( CanPreloadDesktopAssemblies )
+      {
+      	var fi = typeof(System.Windows.Deployment).GetField( "PreloadDesktopAssemblies" );
+        if ( fi != null )
+        {
+				  var alist = fi.GetValue( null ) as List<Assembly>;
+				  if ( alist != null )
+          {
+					  alist.AddRange( assemblies );
+            return;
+          }
+        }
 			} else {
 				throw new NotSupportedException("this version of moonlight can only use appmanifest to load extra assemblies");
 			}
@@ -35,8 +41,8 @@ namespace Mono.MoonDesk
 		
 		public static bool CanPreloadDesktopAssemblies { 
 			get {
-				var pi = typeof(System.Windows.Deployment).GetProperty( "PreloadDesktopAssemblies", BindingFlags.Static );
-				return ( pi != null );
+				var fi = typeof(System.Windows.Deployment).GetField( "PreloadDesktopAssemblies" );
+				return ( fi != null );
 			} 
 		}
 	}
