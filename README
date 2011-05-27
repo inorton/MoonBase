@@ -11,12 +11,12 @@ that comes with it)
   using Moonlight.Gtk;
   using System.Windows;
   using System.Windows.Controls;
-  using MoonDesk;
+  using Mono.MoonDesk;
 
   public class MyGui {
    public static void Main( int argc, char[] argv ){
     Gtk.Application.Init();
-    MoonlightRuntime.Init();
+    MoonBase.Init();
 
     var host = new MoonWindow();
 
