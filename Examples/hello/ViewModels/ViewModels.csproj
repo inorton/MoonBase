@@ -53,15 +53,15 @@
     <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Core" />
-    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4162.37709, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4164.14519, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.MoonWindow">
+    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4164.14542, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonWindow\bin\Debug\Mono.MoonDesk.MoonWindow.dll</HintPath>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4162.37708, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4164.14518, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
     </Reference>
