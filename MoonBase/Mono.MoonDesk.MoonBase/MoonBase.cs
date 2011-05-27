@@ -22,7 +22,7 @@ namespace Mono.MoonDesk.MoonBase
 					foreach (var a in assemblies)
 						alist.Add( a );
 			} else {
-				throw NotSupportedException("this version of moonlight can only use appmanifest to load extra assemblies");
+				throw new NotSupportedException("this version of moonlight can only use appmanifest to load extra assemblies");
 			}
 			
 		}
