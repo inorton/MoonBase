@@ -12,8 +12,14 @@ namespace Mono.MoonDesk.MoonBase
 		{
 			MoonlightRuntime.Init();
 		}
+
+    public static void Init( IEnumerable<Assembly> preload )
+    {
+      PreloadAssemblies( preload );
+      Init();
+    }
 		
-		public static void PreloadAssemblies( IEnumerable<Assembly> assemblies )
+		static void PreloadAssemblies( IEnumerable<Assembly> assemblies )
 		{
 			if ( CanPreloadDesktopAssemblies ){
 				var pi = typeof(System.Windows.Deployment).GetProperty( "PreloadDesktopAssemblies", BindingFlags.Static );
