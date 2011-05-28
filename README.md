@@ -47,12 +47,18 @@ of GUI applications.
 There are two included examples.
 
 #### hello
+
+<img src="https://github.com/inorton/MoonBase/raw/master/Examples/hello/hello.png" alt="hello screenshot"/>
+
 A simple form with a handful of views and view models, shows
 a simple command binding that increments a value in the view model.
 Also shows binding other controls into containers using ContentControl
 ( rather like frame src= in html )
 
 #### slpbrowser
+
+<img src="https://github.com/inorton/MoonBase/raw/master/Examples/slpbrowser/slpbrowser.png" alt="slp browser screenshot"/>
+
 A more complex example, requires slp-sharp. An asynchronous mvvm 
 program that uses the service discovery protocol (SLP) to refresh
 a list on screen without blocking the gui.
