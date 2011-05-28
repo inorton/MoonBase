@@ -12,31 +12,31 @@ Using MoonBase you can develop apps that make use of the silverlight
 controls, xaml and the MVVM pattern (and all the databinding goodness
 that comes with it)
 
-   using Moonlight.Gtk;
-   using System.Windows;
-   using System.Windows.Controls;
-   using Mono.MoonDesk;
+    using Moonlight.Gtk;
+    using System.Windows;
+    using System.Windows.Controls;
+    using Mono.MoonDesk;
 
-   public class MyGui {
-    public static void Main( int argc, char[] argv ){
-     Gtk.Application.Init();
-     MoonBase.Init();
+    public class MyGui {
+     public static void Main( int argc, char[] argv ){
+      Gtk.Application.Init();
+      MoonBase.Init();
 
-     var host = new MoonWindow();
+      var host = new MoonWindow();
+      
+      // construct silverlight directly
+      host.Content = new Button(){ Content = "Hello" };
 
-     // construct silverlight directly
-     host.Content = new Button(){ Content = "Hello" };
-
-     // or load from a xaml resource file and create your view model at the same time
-     var resolver = new Resolver()
-     var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
-     host.Content = mvvm.View as FrameworkElement;
-     host.Show();
-
-     Gtk.Application.Run();
-     return 0;
+      // or load from a xaml resource file and create your view model at the same time
+      var resolver = new Resolver()
+      var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
+      host.Content = mvvm.View as FrameworkElement;
+      host.Show();
+      
+      Gtk.Application.Run();
+      return 0;
+     }
     }
-   }
 
 MoonDesk itself isn't really aiming to provide a windows/mono portable gui
 toolkit but should let you share more code between windows and linux versions
@@ -66,16 +66,16 @@ All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
-    * Redistributions of source code must retain the above copyright notice,
-      this list of conditions and the following disclaimer.  
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.  
 
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
 
-    * Neither the name of moonbase nor the names of its contributors may be 
-      used to endorse or promote products derived from this software without
-      specific prior written permission.
+* Neither the name of moonbase nor the names of its contributors may be 
+  used to endorse or promote products derived from this software without
+  specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
