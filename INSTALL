@@ -1,13 +1,19 @@
 Installation is fairly simple.
 
-cd MoonBase
-./autogen.sh [--prefix=/usr/local]
-make
-sudo make install
+In the same directory as this README file do the following to build moonbase 
+and install into the GAC.
 
-You then just include the Moonlight.Gtk and MoonBase assemblies in your project
-(and make sure you have a AppManifest.xaml file).
+$ make
+$ sudo make install
 
-Have a look at the examples.
+You then just include the Moonlight.Gtk and MoonBase assemblies in your 
+project. If you don't want to MoonBase in the GAC then do:
+
+$ cd MoonBase
+$ ./autogen.sh
+$ make
+$ sudo make install
+
+Have a look at the two example solutions.
 
 Have fun :)
