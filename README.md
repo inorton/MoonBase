@@ -1,55 +1,61 @@
 MoonDesk / MoonBase - (c)2011 Ian Norton
+========================================
 
 MoonDesk is a small set of wrapper libraries to make it easier to write 
 GUI applications that use silverlight controls that will run on linux 
 as desktop applications.
 
-Using MoonDesk you can develop apps that make use of the silverlight
+Using MoonBase
+--------------
+
+Using MoonBase you can develop apps that make use of the silverlight
 controls, xaml and the MVVM pattern (and all the databinding goodness
 that comes with it)
 
-  using Moonlight.Gtk;
-  using System.Windows;
-  using System.Windows.Controls;
-  using Mono.MoonDesk;
+   using Moonlight.Gtk;
+   using System.Windows;
+   using System.Windows.Controls;
+   using Mono.MoonDesk;
 
-  public class MyGui {
-   public static void Main( int argc, char[] argv ){
-    Gtk.Application.Init();
-    MoonBase.Init();
+   public class MyGui {
+    public static void Main( int argc, char[] argv ){
+     Gtk.Application.Init();
+     MoonBase.Init();
 
-    var host = new MoonWindow();
+     var host = new MoonWindow();
 
-    // construct silverlight directly
-    host.Content = new Button(){ Content = "Hello" };
+     // construct silverlight directly
+     host.Content = new Button(){ Content = "Hello" };
 
-    // or load from a xaml resource file and create your view model at the same time
-    var resolver = new Resolver()
-    var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
-    host.Content = mvvm.View as FrameworkElement;
-    host.Show();
+     // or load from a xaml resource file and create your view model at the same time
+     var resolver = new Resolver()
+     var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
+     host.Content = mvvm.View as FrameworkElement;
+     host.Show();
 
-    Gtk.Application.Run();
-    return 0;
+     Gtk.Application.Run();
+     return 0;
+    }
    }
-  }
 
 MoonDesk itself isn't really aiming to provide a windows/mono portable gui
 toolkit but should let you share more code between windows and linux versions
 of GUI applications.
 
+### Examples
+
 There are two included examples.
 
-"hello"
- A simple form with a handful of views and view models, shows
- a simple command binding that increments a value in the view model.
- Also shows binding other controls into containers using ContentControl
- ( rather like frame src= in html )
+#### hello
+A simple form with a handful of views and view models, shows
+a simple command binding that increments a value in the view model.
+Also shows binding other controls into containers using ContentControl
+( rather like frame src= in html )
 
-"slpbrowser"
- A more complex example, requires slp-sharp. An asynchronous mvvm 
- program that uses the service discovery protocol (SLP) to refresh
- a list on screen without blocking the gui.
+#### slpbrowser
+A more complex example, requires slp-sharp. An asynchronous mvvm 
+program that uses the service discovery protocol (SLP) to refresh
+a list on screen without blocking the gui.
 
 BSD License
 ------------
