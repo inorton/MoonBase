@@ -48,6 +48,8 @@
     <Compile Include="ISilverlightContainer.cs" />
     <Compile Include="MoonArea.cs" />
     <Compile Include="MoonBase.cs" />
+    <Compile Include="MoonBaseException.cs" />
+    <Compile Include="MoonBaseDeployment.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

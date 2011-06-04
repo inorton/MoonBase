@@ -49,6 +49,8 @@ FILES =  \
 	ISilverlightContainer.cs \
 	MoonArea.cs \
 	MoonBase.cs \
+	MoonBaseDeployment.cs \
+	MoonBaseException.cs \
 	MoonWindow.cs 
 
 DATA_FILES = 
