@@ -6,7 +6,9 @@ using System.Windows.Resources;
 using System.Windows.Markup;
 using System.Windows.Controls;
 
+#if MOONLIGHT_DESKTOP
 using Moonlight.Gtk;
+#endif
 
 namespace Mono.MoonDesk
 {
@@ -30,6 +32,13 @@ namespace Mono.MoonDesk
     /// </value>
     public VMType ViewModel { get; set; }
   }
+
+#if !MOONLIGHT_DESKTOP
+  // keeps the windows build working, just dont use this on windows
+  public class MoonlightHost : Object {
+      private MoonlightHost() {}
+  }
+#endif
 
   public class ViewLoader
   {
@@ -75,11 +84,16 @@ namespace Mono.MoonDesk
       }
 
       if ( xamlstr != null ){
+
+#if MOONLIGHT_DESKTOP
         if ( Host == null ) {
           view = XamlReader.Load( xamlstr ) as FrameworkElement;
         } else {
           view = Host.CreateElementFromString( xamlstr, true ) as DependencyObject;
         }
+#else
+        view = Application.LoadComponent(new Uri(String.Format("/{0};component/{1}", assemblyName, manifestName), UriKind.Relative)) as DependencyObject;
+#endif
 
         if ( (view != null ) && ( dataContext != null ) ){
           var fe = view as FrameworkElement;
@@ -90,69 +104,6 @@ namespace Mono.MoonDesk
       }
 
       return view;
-    }
-
-    /// <summary>
-    /// Loads the view.
-    /// </summary>
-    /// <returns>
-    /// The view.
-    /// </returns>
-    /// <param name='componentPath'>
-    /// Component path.
-    /// </param>
-    /// <typeparam name='VMType'>
-    /// The 1st type parameter.
-    /// </typeparam>
-    public XamlView<VMType> LoadView<VMType>( string componentPath )
-      where VMType : class, new ()
-    {
-      if ( componentPath.Contains(";") ){
-        var slist = componentPath.Split(new char[] { ';' });
-        if ( slist.Length == 2 ){
-          var asmname = slist[0];
-          var path = slist[1];
-          var ppath = path.Replace('/','.');
-
-          return LoadView<VMType>( asmname, ppath, new VMType() );
-        }
-      }
-      throw new InvalidDataException("resource path invalid");
-    }
-
-    /// <summary>
-    /// Loads the view.
-    /// </summary>
-    /// <returns>
-    /// The view.
-    /// </returns>
-    /// <param name='assembly'>
-    /// Assembly.
-    /// </param>
-    /// <param name='viewfile'>
-    /// Viewfile.
-    /// </param>
-    /// <param name='vm'>
-    /// Vm.
-    /// </param>
-    /// <typeparam name='VMType'>
-    /// The 1st type parameter.
-    /// </typeparam>
-    public XamlView<VMType> LoadView<VMType>(string assembly, string viewfile, VMType vm)
-      where VMType : class
-    {
-      var view = LoadViewXaml( assembly, viewfile, vm );
-
-      var xv = new XamlView<VMType>();
-      xv.View = view;
-      xv.ViewModel = vm;
-
-      var vmb = xv.ViewModel as MoonDesk.ViewModelBase;
-      if ( vmb != null )
-        vmb.View = view;
-
-
-      return xv;
     }
   }
 }

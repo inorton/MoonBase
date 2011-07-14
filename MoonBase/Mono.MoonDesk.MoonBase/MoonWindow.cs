@@ -18,6 +18,7 @@ namespace Mono.MoonDesk
       _host = new MoonArea();
       this.Add (_host);
       this.ShowAll ();
+
     }
 
     public MoonArea Host {

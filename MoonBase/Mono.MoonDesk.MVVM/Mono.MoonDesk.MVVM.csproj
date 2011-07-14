@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2A1A91BB-D576-47E0-A365-6D2418C0235D}</ProjectGuid>
+    <ProjectGuid>{05CEFCEB-51C4-4AED-B100-5EAF9B96217E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>MoonDesk</RootNamespace>
-    <AssemblyName>Mono.MoonDesk.ViewLoader</AssemblyName>
+    <RootNamespace>Mono.MoonDesk</RootNamespace>
+    <AssemblyName>Mono.MoonDesk.MVVM</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,30 +30,16 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ViewLoader.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Mono.MoonDesk.MVVM\Mono.MoonDesk.MVVM.csproj">
-      <Project>{05CEFCEB-51C4-4AED-B100-5EAF9B96217E}</Project>
-      <Name>Mono.MoonDesk.MVVM</Name>
-    </ProjectReference>
+    <Compile Include="DispatchPropertyBase.cs" />
+    <Compile Include="IWindow.cs" />
+    <Compile Include="NotifyPropertyBase.cs" />
+    <Compile Include="ViewModelBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
