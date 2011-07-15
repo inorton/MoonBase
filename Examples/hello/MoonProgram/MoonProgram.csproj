@@ -57,17 +57,21 @@
     <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4164.14542, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4213.13629, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4213.13630, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4164.14518, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MVVM, Version=1.0.4213.13629, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MVVM\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4213.38019, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4164.14519, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -106,9 +110,4 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <ApplicationDefinition Include="appmanifest.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </ApplicationDefinition>
-  </ItemGroup>
 </Project>

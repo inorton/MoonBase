@@ -26,15 +26,15 @@ namespace MyApp
       var asm = System.Reflection.Assembly.LoadFile("/usr/local/lib/mono/moonlight/System.Windows.Controls.dll");
       Mono.MoonDesk.MoonBase.Assemblies.Add( asm );
 
-
-
       var win = new MoonWindow ();
 
 
       // Load embedded xaml from resource
       ViewMappings.MoonlightHost = win.Host;
-      var home = ViewMappings.Resolver.GetHomeView();
-      win.Content = home.View as FrameworkElement;
+      var home = ViewMappings.Resolver.LoadXaml("/Views;component/Views/Home.xaml") as FrameworkElement;
+      home.DataContext = new HomeViewModel();
+
+      win.Content = home;
 
 
 

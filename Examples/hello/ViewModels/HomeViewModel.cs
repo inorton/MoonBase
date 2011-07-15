@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using Mono.MoonDesk.Commands;
@@ -16,14 +17,14 @@ namespace MoonBase.Examples
 
     }
 
-    private XamlView<ToolbarViewModel> _toolbar;
+
     public FrameworkElement ToolbarControl {
       get {
-        _toolbar = ViewMappings.Resolver.GetHomeToolbar();
-        if ( _toolbar != null )
-          return _toolbar.View as FrameworkElement;
+        var vm = new ToolbarViewModel();
+        var v = ViewMappings.Resolver.LoadXaml ("/Views;component/Views/Toolbar.xaml" ) as FrameworkElement;
+        v.DataContext = vm;
 
-        return null;
+        return v;
       }
     }
 
@@ -35,7 +36,7 @@ namespace MoonBase.Examples
     public void RunTestCommand( object param )
     {
       clickCount++;
-      OnPropertyChanged( "TestButtonText" );
+      NotifyPropertyChanged( "TestButtonText" );
     }
 
     public bool CanTestCommand( object param )

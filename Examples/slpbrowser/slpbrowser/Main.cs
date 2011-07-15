@@ -21,9 +21,9 @@ namespace slpbrowser
 
       var win = new MoonWindow ();
 
-      var resolver = new ViewResolver( win.Host );
+      var resolver = new ViewLoader( win.Host );
 
-      var slist = resolver.Loader.LoadView<ServiceListViewModel>( "Views;Views/Views/ServiceList.xaml");
+      var slist = resolver.LoadViewViewModel<ServiceListViewModel>( "Views;Views/Views/ServiceList.xaml");
 
       win.Content = slist.View as System.Windows.FrameworkElement;
 

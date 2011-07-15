@@ -37,17 +37,21 @@
     </Reference>
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d" />
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4164.14519, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MVVM, Version=1.0.4213.40647, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MVVM\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4213.40648, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4213.40648, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4164.14542, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4213.40648, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4164.14518, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

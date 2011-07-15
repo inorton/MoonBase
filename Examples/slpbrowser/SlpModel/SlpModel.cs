@@ -19,24 +19,28 @@ namespace SlpModel
 
     public void Refresh()
     {
-      if ( ClearServices != null )
-        ClearServices();
+      try {
+        if ( ClearServices != null )
+            ClearServices();
 
-      using ( var slp = new SlpClient( null ) ){
-        slp.FindTypes( string.Empty, null, delegate ( string type ){
+        using ( var slp = new SlpClient( null ) ){
+          slp.FindTypes( string.Empty, null, delegate ( string type ){
           
-          using ( var _slp = new SlpClient( null ) ){
-            _slp.Find( type, null, delegate ( string server, UInt16 lifetime ) {
+            using ( var _slp = new SlpClient( null ) ){
+              _slp.Find( type, null, delegate ( string server, UInt16 lifetime ) {
 
-              var serv = new Service(){ Address = server, Lifetime = lifetime };
-              if ( AddService != null )
-                AddService( serv );
-            } );
-          }          
-        } );
+                var serv = new Service(){ Address = server, Lifetime = lifetime };
+                if ( AddService != null ) AddService( serv );
+              } );
+            }
+          } );
+        }
+      } catch ( DllNotFoundException ex ){
+        var s = new Service();
+        s.Address = String.Format( "{0} {1}", ex.GetType().Name, ex.Message );
+        AddService( s );
       }
     }
-    
   }
 }
 

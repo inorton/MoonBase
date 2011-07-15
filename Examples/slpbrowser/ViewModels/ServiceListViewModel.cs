@@ -28,13 +28,13 @@ namespace ViewModels
       _servers = new ObservableCollection<Service> ();
       Model = new SlpModel.SlpModel ();
       Model.ClearServices = delegate {
-        View.Dispatcher.BeginInvoke (delegate {
+        Dispatcher.BeginInvoke (delegate {
           _servers.Clear ();
         });
       };
 
       Model.AddService = delegate(Service obj) {
-        View.Dispatcher.BeginInvoke (delegate {
+        Dispatcher.BeginInvoke (delegate {
           _servers.Add (obj);
         });
       };
@@ -51,8 +51,7 @@ namespace ViewModels
     public void EndRefresh (object unused)
     {
       lock (Model) {
-        Refreshing = false;
-        OnPropertyChanged ("Refreshing");
+        DispatchNotifySetProperty( () => Refreshing, false );
 
         RefreshCommand.CanExecute(null);
 
@@ -64,16 +63,12 @@ namespace ViewModels
     {
       lock (Model) {
         Console.WriteLine("start");
-        
-        RefreshTask = new Task (View.Dispatcher);
+        DispatchNotifySetProperty( () => Refreshing, true );
+
+
+        RefreshTask = new Task (Dispatcher);
         RefreshTask.Operation = Model.Refresh;
-        RefreshTask.OnFinish = delegate {
-          EndRefresh (null); };
-
-        Refreshing = true;
-
-        OnPropertyChanged ("Refreshing");
-
+        RefreshTask.OnFinish = delegate { EndRefresh (null); };
         RefreshCommand.CanExecute(null);
 
         RefreshTask.Start ();
