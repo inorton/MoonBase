@@ -8,6 +8,7 @@ namespace Mono.MoonDesk
 {
     public static class MoonBaseDeployment
     {
+#if MOONLIGHT_DESKTOP
         public static bool InitializeDeployment (string culture, string uiCulture)
         {
             var dep = Deployment.Current;
@@ -54,6 +55,7 @@ namespace Mono.MoonDesk
 
             return (bool)MoonBase.CallPrivateInstanceMethod (dep, "CreateApplication");
         }
+#endif
     }
 }
 

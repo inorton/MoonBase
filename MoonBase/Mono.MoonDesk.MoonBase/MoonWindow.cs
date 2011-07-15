@@ -1,11 +1,15 @@
 using System;
-using Moonlight.Gtk;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
+#if MOONLIGHT_DESKTOP
+using Moonlight.Gtk;
+#endif
+
 namespace Mono.MoonDesk
 {
+#if MOONLIGHT_DESKTOP
   public class MoonWindow : Gtk.Window, ISilverlightContainer
   {
     private MoonArea _host = null;
@@ -41,4 +45,10 @@ namespace Mono.MoonDesk
     }
 
   }
+#else
+    public class MoonWindow
+    {
+        private MoonWindow() { }
+    }
+#endif
 }

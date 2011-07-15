@@ -9,7 +9,6 @@ using Mono.MoonDesk;
 
 #if MOONLIGHT_DESKTOP
 using Moonlight.Gtk;
-
 #endif
 
 namespace Mono.MoonDesk

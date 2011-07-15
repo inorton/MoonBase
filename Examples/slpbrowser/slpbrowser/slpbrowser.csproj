@@ -50,19 +50,19 @@
     <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d" />
     <Reference Include="System.Core" />
-    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4213.40648, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4213.43039, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4213.40648, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4213.43094, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4213.40648, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4213.43039, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.MoonDesk.MVVM, Version=1.0.4213.40647, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MVVM, Version=1.0.4213.43039, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MVVM\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
     </Reference>
@@ -89,10 +89,5 @@
       <Project>{38A57CC8-3497-42A6-B93F-E557D178E6A7}</Project>
       <Name>Views</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="appmanifest.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </ApplicationDefinition>
   </ItemGroup>
 </Project>

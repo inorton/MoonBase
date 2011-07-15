@@ -66,22 +66,25 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <EmbeddedResource Include="Views\Toolbar.xaml">
+    <Page Include="Views\Toolbar.xaml">
       <LogicalName>Views/Toolbar.xaml</LogicalName>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Home.xaml">
+    </Page>
+    <Page Include="Views\Home.xaml">
       <LogicalName>Views/Home.xaml</LogicalName>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </Page>
   </ItemGroup>
 </Project>

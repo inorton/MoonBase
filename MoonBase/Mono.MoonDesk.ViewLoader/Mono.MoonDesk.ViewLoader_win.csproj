@@ -16,7 +16,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG MOONLIGHT_DESKTOP</DefineConstants>
+    <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -49,25 +49,23 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ViewLoader.cs" />
     <Compile Include="VVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mono.MoonDesk.MVVM\Mono.MoonDesk.MVVM_win.csproj">
+      <Project>{05CEFCEB-51C4-4AED-B100-5EAF9B96217E}</Project>
+      <Name>Mono.MoonDesk.MVVM_win</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

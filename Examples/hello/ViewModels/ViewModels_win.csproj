@@ -66,36 +66,22 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Moonlight.Gtk, Version=3.0.0.0, Culture=neutral, PublicKeyToken=976ad8f3443f9a4d" />
-    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-    </Reference>
-    <Reference Include="System.Windows, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.MoonDesk.Commands, Version=1.0.4213.41012, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Mono.MoonDesk.Commands">
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4213.41013, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Mono.MoonDesk.MoonBase">
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader, Version=1.0.4213.41012, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Mono.MoonDesk.MVVM">
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.MoonDesk.ViewLoader">
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.MoonDesk.MVVM, Version=1.0.4213.41012, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MVVM\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />

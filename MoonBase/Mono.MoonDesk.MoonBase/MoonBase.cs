@@ -3,7 +3,10 @@ using System.Windows;
 using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
+
+#if MOONLIGHT_DESKTOP
 using Moonlight.Gtk;
+#endif
 
 namespace Mono.MoonDesk
 {
@@ -12,9 +15,12 @@ namespace Mono.MoonDesk
 		public static List<Assembly> Assemblies = new List<Assembly>();
         public static void Init ()
         {
+#if MOONLIGHT_DESKTOP
             MoonlightRuntime.Init ();
+#endif
         }	
-		
+
+#if MOONLIGHT_DESKTOP		
         internal static void CallPrivateStaticVoidExternMethod( Type t, string methodname, params object[] args )
         {
             var mi = t.GetMethod( methodname, BindingFlags.NonPublic|BindingFlags.DeclaredOnly );
@@ -61,7 +67,7 @@ namespace Mono.MoonDesk
 
             fi.SetValue( instance, value );
         }
- 
+#endif 
 		
     }
 }

@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
-using Moonlight.Gtk;
 using System.Windows;
 using System.Windows.Controls;
-
 using System.Reflection;
+
+#if MOONLIGHT_DESKTOP
+using Moonlight.Gtk;
+#else
+
+#endif
 
 namespace Mono.MoonDesk
 {
+#if MOONLIGHT_DESKTOP
     public class MoonArea : MoonlightHost, ISilverlightContainer
     {
         public MoonArea () : base()
@@ -22,9 +27,12 @@ namespace Mono.MoonDesk
                 System.Windows.Application.Current.RootVisual = value;
             }
         }
-
-
-
     }
+#else
+    public class MoonArea
+    {
+        private MoonArea() { }
+    }
+#endif
 }
 

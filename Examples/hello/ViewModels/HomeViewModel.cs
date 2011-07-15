@@ -46,7 +46,11 @@ namespace MoonBase.Examples
 
     public string RunningOOB {
       get {
+#if MOONLIGHT_DESKTOP
         return System.Windows.Application.Current.IsRunningOutOfBrowser.ToString();
+#else
+          return "WPF";
+#endif
       }
     }
   }
