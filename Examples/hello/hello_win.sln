@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views_win", "Views\Views_win.csproj", "{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels_win", "ViewModels\ViewModels_win.csproj", "{99966BD3-58B7-412D-9E06-CB9E6169753E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfProgram", "WpfProgram\WpfProgram.csproj", "{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		MonoDebug|Any CPU = MonoDebug|Any CPU
+		MonoDebug|x86 = MonoDebug|x86
+		MonoRelease|Any CPU = MonoRelease|Any CPU
+		MonoRelease|x86 = MonoRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|x86.ActiveCfg = Debug|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Debug|x86.Build.0 = Debug|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoDebug|Any CPU.ActiveCfg = MonoDebug|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoDebug|Any CPU.Build.0 = MonoDebug|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoDebug|x86.ActiveCfg = MonoDebug|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoDebug|x86.Build.0 = MonoDebug|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoRelease|Any CPU.ActiveCfg = MonoRelease|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoRelease|Any CPU.Build.0 = MonoRelease|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoRelease|x86.ActiveCfg = MonoRelease|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.MonoRelease|x86.Build.0 = MonoRelease|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|x86.ActiveCfg = Release|x86
+		{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}.Release|x86.Build.0 = Release|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Debug|x86.ActiveCfg = Debug|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Debug|x86.Build.0 = Debug|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoDebug|Any CPU.ActiveCfg = MonoDebug|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoDebug|Any CPU.Build.0 = MonoDebug|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoDebug|x86.ActiveCfg = MonoDebug|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoDebug|x86.Build.0 = MonoDebug|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoRelease|Any CPU.ActiveCfg = MonoRelease|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoRelease|Any CPU.Build.0 = MonoRelease|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoRelease|x86.ActiveCfg = MonoRelease|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.MonoRelease|x86.Build.0 = MonoRelease|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Release|x86.ActiveCfg = Release|x86
+		{99966BD3-58B7-412D-9E06-CB9E6169753E}.Release|x86.Build.0 = Release|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.Debug|x86.ActiveCfg = Debug|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.Debug|x86.Build.0 = Debug|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.MonoDebug|Any CPU.ActiveCfg = Debug|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.MonoDebug|x86.ActiveCfg = Debug|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.MonoDebug|x86.Build.0 = Debug|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.MonoRelease|Any CPU.ActiveCfg = Release|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.MonoRelease|x86.ActiveCfg = Release|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.MonoRelease|x86.Build.0 = Release|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.Release|Any CPU.ActiveCfg = Release|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.Release|x86.ActiveCfg = Release|x86
+		{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MoonProgram\MoonProgram.csproj
+	EndGlobalSection
+EndGlobal

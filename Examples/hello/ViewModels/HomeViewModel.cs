@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Threading;
 using Mono.MoonDesk.Commands;
 using Mono.MoonDesk;
 
@@ -9,14 +10,14 @@ namespace MoonBase.Examples
 {
   public class HomeViewModel : ViewModelBase
   {
-    int clickCount = 0;
+    bool IsRunning = false;
+    public bool WantStop { get; set; }
 
     public HomeViewModel()
     {
-      TestCommand = new DelegateCommand( RunTestCommand, CanTestCommand );
-
+      TestCommand = new DelegateCommand( ToggleTestCommand, CanTestCommand );
+      ProgressValue = 0.0;
     }
-
 
     public FrameworkElement ToolbarControl {
       get {
@@ -28,30 +29,68 @@ namespace MoonBase.Examples
       }
     }
 
-    public string TestButtonText {
-      get { return String.Format("Click Me ({0})", clickCount ); }
+    public string ToggleTestButtonText
+    {
+        get { 
+            if (WantStop) return "Stopping";
+            if (IsRunning) return "Stop";
+            return "Start";
+        }
+        set { }
     }
+
     public DelegateCommand TestCommand { get; set; }
 
-    public void RunTestCommand( object param )
+    private Thread task;
+    public void ToggleTestCommand( object param )
     {
-      clickCount++;
-      NotifyPropertyChanged( "TestButtonText" );
+        if (IsRunning && !WantStop)
+        {
+            WantStop = true;
+        }
+        else
+        {
+            WantStop = false;
+            task = new Thread(new ThreadStart(BackgroundTask));
+            task.Start();
+        }
+        DispatchNotifySetProperty(() => ToggleTestButtonText, null);
     }
 
     public bool CanTestCommand( object param )
     {
-      return true;
+        if (WantStop) return false;
+        return true;
     }
 
-    public string RunningOOB {
-      get {
-#if MOONLIGHT_DESKTOP
-        return System.Windows.Application.Current.IsRunningOutOfBrowser.ToString();
-#else
-          return "WPF";
-#endif
-      }
+    public double ProgressValue { get; set; }
+    public string Message { get; set; }
+
+    private void BackgroundTask()
+    {
+        IsRunning = true;
+        ProgressValue = 0.0;
+        while (!WantStop)
+        {
+            Thread.Sleep(500);
+            if (ProgressValue < 100) {
+                DispatchNotifySetProperty(() => ProgressValue, ProgressValue + 2);
+                DispatchNotifySetProperty(() => Message, String.Format("{0}...", ProgressValue));
+            } else { 
+                DispatchNotifySetProperty(() => Message, "Done");
+            }
+
+        }
+
+        DispatchNotifySetProperty(() => WantStop, true);
+        Thread.Sleep(2500);
+        DispatchNotifySetProperty(() => WantStop, false);
+        DispatchNotifySetProperty(() => ProgressValue, 0);
+
+        IsRunning = false;
+        DispatchNotifySetProperty(() => ToggleTestButtonText, null);
     }
+
+
   }
 }
