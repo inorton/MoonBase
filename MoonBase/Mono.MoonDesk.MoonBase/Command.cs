@@ -55,14 +55,20 @@ namespace Mono.MoonDesk.Commands
       var tmpcan = canExecuteFunction(arg);
       if ( canExecuteState != tmpcan ){
         canExecuteState = tmpcan;
-        if ( CanExecuteChanged != null )
-          CanExecuteChanged(this, new EventArgs());
+        NotifyCanExecuteChanged();
       }
       return tmpcan;
     }
 
     #endregion
 
-    
+
+    public void NotifyCanExecuteChanged()
+    {
+      if (CanExecuteChanged != null)
+      {
+        CanExecuteChanged(this, new EventArgs());
+      }
+    }
   }
 }

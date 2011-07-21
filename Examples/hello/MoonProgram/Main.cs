@@ -33,12 +33,12 @@ namespace MyApp
       var win = new Mono.MoonDesk.AWindow();
       ViewMappings.Resolver =  new ViewLoader( win.Host );
 
-      var home = ViewMappings.Resolver.LoadXaml("/Views;component/Views/Home.xaml") as FrameworkElement;
-      home.DataContext = new HomeViewModel();
-      win.Content = home;
+
+      var homevvm = ViewMappings.Resolver.LoadViewViewModel<HomeViewModel>("/Views;component/Views/Home.xaml");
+      win.Content = homevvm.View;
 
       win.Show ();
-      win.Resize( 640,350 );
+      win.Resize( 440,350 );
       Gtk.Application.Run ();
       
     }

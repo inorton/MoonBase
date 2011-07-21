@@ -44,17 +44,19 @@ namespace MoonBase.Examples
     private Thread task;
     public void ToggleTestCommand( object param )
     {
+        Console.WriteLine("Clicked! {0}",IsRunning);
         if (IsRunning && !WantStop)
         {
-            WantStop = true;
+            DispatchNotifySetProperty(() => WantStop, true);
         }
         else
         {
-            WantStop = false;
+            DispatchNotifySetProperty(() => WantStop, false);
             task = new Thread(new ThreadStart(BackgroundTask));
             task.Start();
         }
         DispatchNotifySetProperty(() => ToggleTestButtonText, null);
+        Dispatcher.BeginInvoke( () => { TestCommand.NotifyCanExecuteChanged(); } );
     }
 
     public bool CanTestCommand( object param )
@@ -69,9 +71,11 @@ namespace MoonBase.Examples
     private void BackgroundTask()
     {
         IsRunning = true;
+        Dispatcher.BeginInvoke( () => { TestCommand.NotifyCanExecuteChanged(); } );
         ProgressValue = 0.0;
         while (!WantStop)
         {
+            Console.Error.Write(".");
             Thread.Sleep(500);
             if (ProgressValue < 100) {
                 DispatchNotifySetProperty(() => ProgressValue, ProgressValue + 2);
@@ -79,8 +83,8 @@ namespace MoonBase.Examples
             } else { 
                 DispatchNotifySetProperty(() => Message, "Done");
             }
-
         }
+
 
         DispatchNotifySetProperty(() => WantStop, true);
         Thread.Sleep(2500);
@@ -89,6 +93,7 @@ namespace MoonBase.Examples
 
         IsRunning = false;
         DispatchNotifySetProperty(() => ToggleTestButtonText, null);
+        Dispatcher.BeginInvoke( () => { TestCommand.NotifyCanExecuteChanged(); } );
     }
 
 

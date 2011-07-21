@@ -99,11 +99,11 @@ namespace Mono.MoonDesk
             }
         }
 
-    }
 #else
     public class AWindow : Window, IWindow {
+#endif
 
     }
-#endif
+
   
 }
