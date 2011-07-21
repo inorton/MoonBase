@@ -1,6 +1,0 @@
-Name: Mono.MoonDesk.Commands
-Description: Mono.MoonDesk.Commands
-Version: 0.1
-
-Requires: 
-Libs: -r:@expanded_libdir@/@PACKAGE@/Mono.MoonDesk.Commands.dll
