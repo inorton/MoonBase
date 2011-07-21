@@ -38,23 +38,24 @@ namespace Mono.MoonDesk
 
 #if !MOONLIGHT_DESKTOP
     // keeps the windows build working, just dont use this on windows
-    public class MoonlightHost : Object
+    public class MoonlightHost : ISilverlightContainer
     {
         private MoonlightHost ()
         {
         }
+        public FrameworkElement Content { get; set; }
     }
 
 #endif
 
     public class ViewLoader
     {
-        public MoonlightHost Host { get; private set; }
+        public MoonArea Host { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MoonDesk.ViewLoader"/> class.
         /// </summary>
-        public ViewLoader (MoonlightHost mhost)
+        public ViewLoader ( MoonArea mhost)
         {
             Host = mhost;
         }

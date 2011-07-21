@@ -5,6 +5,14 @@ using System.Windows.Media;
 using System.ComponentModel;
 using System.Windows.Automation.Peers;
 
+#if MOONLIGHT_DESKTOP
+using MoonlightHost = Moonlight.Gtk.MoonlightHost;
+#else
+using MoonlightHost = object;
+#endif
+
+using Mono.MoonDesk;
+
 namespace System.Windows.Controls
 {
     public interface IWindow
@@ -26,18 +34,13 @@ namespace System.Windows.Controls
         //     true if the window is active; otherwise, false. The default is false.
         bool IsActive { get; }
 
-#if !MOONLIGHT_DESKTOP
-        //
-        // Summary:
-        //     Gets or sets the resize mode. This is a dependency property.
-        //
-        // Returns:
-        //     A System.Windows.ResizeMode value specifying the resize mode.
-        ResizeMode ResizeMode { get; set; }
+        double Width { get; set; }
+        double Height { get; set; }
 
-#endif
+        MoonArea Host { get; }
 
-        //
+        void Resize( int w, int h );
+
         // Summary:
         //     Gets or sets a value that indicates whether the window has a task bar button.
         //     This is a dependency property.
@@ -48,6 +51,14 @@ namespace System.Windows.Controls
         bool ShowInTaskbar { get; set; }
 
 #if !MOONLIGHT_DESKTOP
+        //
+        // Summary:
+        //     Gets or sets the resize mode. This is a dependency property.
+        //
+        // Returns:
+        //     A System.Windows.ResizeMode value specifying the resize mode.
+        ResizeMode ResizeMode { get; set; }
+
         //
         // Summary:
         //     Gets or sets a value that indicates whether a window will automatically size

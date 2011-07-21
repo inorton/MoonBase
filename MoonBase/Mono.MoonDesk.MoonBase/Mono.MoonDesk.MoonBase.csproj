@@ -70,14 +70,18 @@
     <Compile Include="MoonBase.cs" />
     <Compile Include="MoonBaseException.cs" />
     <Compile Include="MoonBaseDeployment.cs" />
-    <Compile Include="AWindow.cs" />
     <Compile Include="Command.cs" />
-    <Compile Include="IWindow.cs" />
     <Compile Include="MVVM\DispatchPropertyBase.cs" />
     <Compile Include="MVVM\NotifyPropertyBase.cs" />
     <Compile Include="MVVM\ViewLoader.cs" />
     <Compile Include="MVVM\ViewModelBase.cs" />
     <Compile Include="MVVM\VVM.cs" />
+    <Compile Include="Window\AWindow-windows.cs" />
+    <Compile Include="Window\AWindow-moonlight.cs" />
+    <Compile Include="Window\IWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Window\" />
+  </ItemGroup>
 </Project>
