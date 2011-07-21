@@ -66,17 +66,8 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mono.MoonDesk.Commands">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.MoonDesk.MoonBase">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.MoonDesk.MVVM">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Mono.MoonDesk.MoonBase.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

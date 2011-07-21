@@ -1,23 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MoonBase", "MoonBase", "{AAA7FAF3-7495-422B-8967-8026963B47DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonBase_Moonlight", "Mono.MoonDesk.MoonBase\MoonBase_Moonlight.csproj", "{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.MoonDesk.MoonBase", "Mono.MoonDesk.MoonBase\Mono.MoonDesk.MoonBase.csproj", "{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonBase_Windows", "Mono.MoonDesk.MoonBase\MoonBase_Windows.csproj", "{97CF3658-FC23-4924-9501-231DABF3F129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		MonoDebug|Any CPU = MonoDebug|Any CPU
 		MonoRelease|Any CPU = MonoRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.MonoDebug|Any CPU.ActiveCfg = MonoDebug|Any CPU
 		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.MonoDebug|Any CPU.Build.0 = MonoDebug|Any CPU
 		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.MonoRelease|Any CPU.ActiveCfg = MonoRelease|Any CPU
 		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.MonoRelease|Any CPU.Build.0 = MonoRelease|Any CPU
+		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CF3658-FC23-4924-9501-231DABF3F129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97CF3658-FC23-4924-9501-231DABF3F129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97CF3658-FC23-4924-9501-231DABF3F129}.MonoDebug|Any CPU.ActiveCfg = MonoDebug|Any CPU
+		{97CF3658-FC23-4924-9501-231DABF3F129}.MonoRelease|Any CPU.ActiveCfg = MonoRelease|Any CPU
+		{97CF3658-FC23-4924-9501-231DABF3F129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CF3658-FC23-4924-9501-231DABF3F129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{CD0E36E5-B863-4500-BE20-2CDBB5F9842E} = {AAA7FAF3-7495-422B-8967-8026963B47DC}
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Mono.MoonDesk.MoonBase\Mono.MoonDesk.MoonBase.csproj
@@ -25,8 +35,5 @@ Global
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
 		$1.ResourceNamePolicy = FileFormatDefault
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

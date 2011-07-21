@@ -56,7 +56,7 @@ namespace MoonBase.Examples
             task.Start();
         }
         DispatchNotifySetProperty(() => ToggleTestButtonText, null);
-        Dispatcher.BeginInvoke( () => { TestCommand.NotifyCanExecuteChanged(); } );
+        Dispatcher.BeginInvoke(new Action(delegate { TestCommand.NotifyCanExecuteChanged(); }));
     }
 
     public bool CanTestCommand( object param )
@@ -71,7 +71,7 @@ namespace MoonBase.Examples
     private void BackgroundTask()
     {
         IsRunning = true;
-        Dispatcher.BeginInvoke( () => { TestCommand.NotifyCanExecuteChanged(); } );
+        Dispatcher.BeginInvoke(new Action(delegate { TestCommand.NotifyCanExecuteChanged(); }));
         ProgressValue = 0.0;
         while (!WantStop)
         {
@@ -93,7 +93,7 @@ namespace MoonBase.Examples
 
         IsRunning = false;
         DispatchNotifySetProperty(() => ToggleTestButtonText, null);
-        Dispatcher.BeginInvoke( () => { TestCommand.NotifyCanExecuteChanged(); } );
+        Dispatcher.BeginInvoke(new Action(delegate { TestCommand.NotifyCanExecuteChanged(); }));
     }
 
 

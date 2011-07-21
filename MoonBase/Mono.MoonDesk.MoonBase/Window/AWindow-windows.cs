@@ -15,7 +15,8 @@ namespace Mono.MoonDesk
 
         public void Resize( int w, int h )
         {
-            throw new NotImplementedException();
+            this.Width = (double)w;
+            this.Height = (double)h;
         }
     }
 }

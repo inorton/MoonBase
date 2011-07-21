@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -91,13 +91,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\ViewModels\ViewModels.csproj">
+    <ProjectReference Include="..\ViewModels\ViewModels_win.csproj">
       <Project>{99966BD3-58B7-412D-9E06-CB9E6169753E}</Project>
       <Name>ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Views\Views.csproj">
+    <ProjectReference Include="..\Views\Views_moonlight.csproj">
       <Project>{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}</Project>
-      <Name>Views</Name>
+      <Name>Views_moonlight</Name>
     </ProjectReference>
   </ItemGroup>
   <ProjectExtensions>

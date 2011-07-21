@@ -8,7 +8,7 @@
     <ProjectGuid>{3600CCE0-ABA9-4D6D-B6C6-6D9A3FF45CC9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfProgram</RootNamespace>
+    <RootNamespace>MoonBase.Examples</RootNamespace>
     <AssemblyName>WpfProgram</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,17 +40,8 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mono.MoonDesk.Commands">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.Commands\bin\Debug\Mono.MoonDesk.Commands.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.MoonDesk.MoonBase">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Debug\Mono.MoonDesk.MoonBase.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.MoonDesk.MVVM">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MVVM\bin\Debug\Mono.MoonDesk.MVVM.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.MoonDesk.ViewLoader">
-      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.ViewLoader\bin\Debug\Mono.MoonDesk.ViewLoader.dll</HintPath>
+      <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Mono.MoonDesk.MoonBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -100,7 +91,7 @@
       <Name>ViewModels_win</Name>
     </ProjectReference>
     <ProjectReference Include="..\Views\Views_win.csproj">
-      <Project>{D5EA31DF-FEC5-435D-9E25-80F037BEB22A}</Project>
+      <Project>{5FB6D3FE-3974-468F-A276-3349E1C3EADF}</Project>
       <Name>Views_win</Name>
     </ProjectReference>
   </ItemGroup>

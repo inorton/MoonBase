@@ -8,7 +8,7 @@ using System.Windows.Automation.Peers;
 #if MOONLIGHT_DESKTOP
 using MoonlightHost = Moonlight.Gtk.MoonlightHost;
 #else
-using MoonlightHost = object;
+using MoonlightHost = System.Object;
 #endif
 
 using Mono.MoonDesk;

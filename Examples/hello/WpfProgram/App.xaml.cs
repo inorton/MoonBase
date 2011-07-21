@@ -5,9 +5,8 @@ using System.Data;
 using System.Windows;
 
 using Mono.MoonDesk;
-using MoonBase.Examples;
 
-namespace WpfProgram
+namespace MoonBase.Examples
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -24,6 +23,7 @@ namespace WpfProgram
             win.Content = home.View;
             home.View.Visibility = Visibility.Visible;
             win.Show();
+            win.Resize(400, 300);
         }
     }
 }
