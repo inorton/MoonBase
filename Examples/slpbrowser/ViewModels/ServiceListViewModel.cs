@@ -20,7 +20,7 @@ namespace ViewModels
       get {
         return _servers;
       }
-    }
+    }   
 
     public ServiceListViewModel ()
     {
