@@ -88,9 +88,10 @@
     <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Core" />
-    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4220.12259, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
+    <Reference Include="Mono.MoonDesk.MoonBase, Version=1.0.4220.27423, Culture=neutral, PublicKeyToken=5d2e4455728fa780">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MoonBase\Mono.MoonDesk.MoonBase\bin\Mono.MoonDesk.MoonBase.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
