@@ -10,22 +10,21 @@ namespace MoonBase.Examples
 {
   public class HomeViewModel : ViewModelBase
   {
-    bool IsRunning = false;
+    private bool IsRunning = false;
+    private VVM toolbar = null;
     public bool WantStop { get; set; }
+
 
     public HomeViewModel()
     {
       TestCommand = new DelegateCommand( ToggleTestCommand, CanTestCommand );
+      toolbar = ViewMappings.Resolver.LoadViewViewModel<ToolbarViewModel>("/Views;component/Views/Toolbar.xaml");
       ProgressValue = 0.0;
     }
 
     public FrameworkElement ToolbarControl {
       get {
-        var vm = new ToolbarViewModel();
-        var v = ViewMappings.Resolver.LoadXaml ("/Views;component/Views/Toolbar.xaml" ) as FrameworkElement;
-        v.DataContext = vm;
-
-        return v;
+          return toolbar.View;
       }
     }
 

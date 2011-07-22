@@ -1,8 +1,16 @@
 <UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
- <StackPanel Orientation="Horizontal">
-   <Button Content="Hello"></Button>
-   <Button Content="GoodBye"></Button>
- </StackPanel>
+    <UserControl.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Margin" Value="4,1,4,1"/>
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Horizontal">
+        <Button Content="This Works in WPF" Command="{Binding Path=WpfClickedCommand}"></Button>
+        <TextBlock VerticalAlignment="Center">And</TextBlock>
+        <Button Content="Also Moonlight-Desktop" Command="{Binding Path=Ml4ClickedCommand}"></Button>
+    </StackPanel>
 </UserControl>

@@ -23,7 +23,9 @@ namespace MoonBase.Examples
             win.Content = home.View;
             home.View.Visibility = Visibility.Visible;
             win.Show();
-            win.Resize(400, 300);
+            win.Resize(420, 200);
+            win.Title = "Hello Moon";
+            ((Window)win).ResizeMode = ResizeMode.NoResize;
         }
     }
 }
