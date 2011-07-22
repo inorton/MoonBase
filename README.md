@@ -3,7 +3,9 @@ MoonDesk / MoonBase - (c)2011 Ian Norton
 
 MoonDesk is a small set of wrapper libraries to make it easier to write 
 GUI applications that use silverlight controls that will run on linux 
-as desktop applications.
+as desktop applications. With a little care and some projects that share
+source files you can make a WPF and Moonlight version of your program
+(see the included hello example)
 
 Using MoonBase
 --------------
@@ -22,29 +24,22 @@ that comes with it)
       Gtk.Application.Init();
       MoonBase.Init();
 
-      var host = new MoonWindow();
+      AWindow win = new AWindow();
+      ViewLoader loader = new ViewLoader( win.Host );
       
-      // construct silverlight directly
-      host.Content = new Button(){ Content = "Hello" };
+      // load from a xaml resource file and create your view model at the same time
+      VVM foo = loader.LoadViewViewModel<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
+      
+      win.Content = foo.View;
 
-      // or load from a xaml resource file and create your view model at the same time
-      var resolver = new Resolver()
-      var mvvm = resolver.LoadXaml<MyViewModelClass>("MyXamlAssembly;MyNamespace/Views/MyView.xaml");
-      host.Content = mvvm.View as FrameworkElement;
-      host.Show();
-      
       Gtk.Application.Run();
       return 0;
      }
     }
 
-MoonDesk itself isn't really aiming to provide a windows/mono portable gui
-toolkit but should let you share more code between windows and linux versions
-of GUI applications.
+MoonDesk alone isn't enough to build a cross-platform xaml based app but should help along the way. 
 
 ### Examples
-
-There are two included examples.
 
 #### hello
 
@@ -54,14 +49,6 @@ A simple form with a handful of views and view models, shows
 a simple command binding that increments a value in the view model.
 Also shows binding other controls into containers using ContentControl
 ( rather like frame src= in html )
-
-#### slpbrowser
-
-<img src="https://github.com/inorton/MoonBase/raw/master/Examples/slpbrowser/slpbrowser.png" alt="slp browser screenshot"/>
-
-A more complex example, requires slp-sharp. An asynchronous mvvm 
-program that uses the service discovery protocol (SLP) to refresh
-a list on screen without blocking the gui.
 
 BSD License
 ------------
