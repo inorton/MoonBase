@@ -1,0 +1,6 @@
+Name: MoonBase_Windows
+Description: MoonBase_Windows
+Version: 0.1
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/Mono.MoonDesk.MoonBase.dll

@@ -1,19 +1,27 @@
 Installation is fairly simple.
 
-In the same directory as this README file do the following to build moonbase 
-and install into the GAC.
+You can build moonbase in monodevelop or visual studio or you can use mdtool 
+to generate makefiles.
 
+Building in Visual Studio or MonoDevelop
+-----------------------------------------
+
+If you are using monodevelop, load up MoonBase.sln and choose either the 
+MonoDebug or MonoRelease configuration.
+
+If you are aiming for .Net then choose one of the other configurations.
+
+Building on the command line
+-----------------------------
+
+$ ./configure
 $ make
 $ sudo make install
 
-You then just include the Moonlight.Gtk and MoonBase assemblies in your 
-project. If you don't want to MoonBase in the GAC then do:
+This should build and install moonbase and create pkg-config files that 
+monodevelop and mono will be able to find.
 
-$ cd MoonBase
-$ ./autogen.sh
-$ make
-$ sudo make install
+To build manually, you can call:
+ pkg-config mono.moondesk.moonbase --libs
 
-Have a look at the two example solutions.
-
-Have fun :)
+To get the path to the install library.

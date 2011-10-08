@@ -1,0 +1,6 @@
+Name: MoonBase_Moonlight
+Description: MoonBase_Moonlight
+Version: 0.1
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/Mono.MoonDesk.MoonBase.dll
