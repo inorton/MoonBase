@@ -6,14 +6,15 @@ to generate makefiles.
 Building in Visual Studio or MonoDevelop
 -----------------------------------------
 
-If you are using monodevelop, load up MoonBase.sln and choose either the 
-MonoDebug or MonoRelease configuration.
+If you are using monodevelop, load up MoonBase/MoonBase.sln and choose either 
+the MonoDebug or MonoRelease configuration.
 
 If you are aiming for .Net then choose one of the other configurations.
 
 Building on the command line
 -----------------------------
 
+$ cd MoonBase
 $ ./configure
 $ make
 $ sudo make install
