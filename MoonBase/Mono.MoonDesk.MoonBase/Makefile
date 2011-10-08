@@ -24,7 +24,7 @@ endif
 
 ifeq ($(CONFIG),MONODEBUG)
 ASSEMBLY_COMPILER_COMMAND = gmcs
-ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize- -debug -define:DEBUG -sdk:2  "-define:DEBUG MOONLIGHT_DESKTOP"
+ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize- -debug -define:DEBUG -sdk:2  "-define:DEBUG,MOONLIGHT_DESKTOP"
 ASSEMBLY = bin/Mono.MoonDesk.MoonBase.dll
 ASSEMBLY_MDB = $(ASSEMBLY).mdb
 COMPILE_TARGET = library
@@ -106,7 +106,8 @@ REFERENCES =  \
 	-pkg:gtk-sharp-2.0 \
 	-pkg:glib-sharp-2.0 \
 	-pkg:moonlight-gtk-4.0 \
-	-pkg:moonlight-desktop-4.0
+	-pkg:moonlight-desktop-4.0 \
+	System.Core
 
 DLL_REFERENCES = 
 
